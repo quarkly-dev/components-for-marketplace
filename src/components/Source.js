@@ -1,7 +1,9 @@
 import React from 'react';
 import atomize from '@quarkly/atomize';
+import ComponentNotice from './ComponentNotice';
+const Source = atomize.source();
 
-const Source = ({
+const SourceComponent = ({
 	container,
 	src,
 	srcSet,
@@ -22,14 +24,14 @@ const Source = ({
 		type = typePicture || '';
 	}
 
-	return <source
+	return container ? <Source
 		{...props}
 		src={src}
 		srcSet={srcSet}
 		type={type}
 		media={container !== 'picture' ? mediaInput || mediaSelect : ''}
 		sizes={container !== 'picture' ? sizes : ''}
-	/>;
+	/> : <ComponentNotice message={'Этот компонент должен быть внутри "Picture", "Audio" или "Video"'} {...props} />;
 };
 
 const propInfo = {
@@ -127,7 +129,7 @@ const propInfo = {
 const defaultProps = {
 	mediaSelect: 'all'
 };
-export default atomize(Source)({
+export default atomize(SourceComponent)({
 	name: 'Source',
 	description: {
 		en: 'Indicates several media resources for Picture, Video, and Audio components',

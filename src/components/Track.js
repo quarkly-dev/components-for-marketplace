@@ -1,7 +1,10 @@
 import React from 'react';
 import atomize from '@quarkly/atomize';
+import ComponentNotice from './ComponentNotice';
+const Track = atomize.track();
 
-const Track = ({
+const TrackComponent = ({
+	container,
 	src,
 	srclang,
 	kind,
@@ -10,14 +13,14 @@ const Track = ({
 	children,
 	...props
 }) => {
-	return <track
+	return container ? <Track
 		{...props}
 		default={isDefault || undefined}
 		src={src}
 		srclang={srclang}
 		kind={kind}
 		label={label}
-	/>;
+	/> : <ComponentNotice message={'Этот компонент должен быть внутри "Audio" или "Video"'} {...props} />;
 };
 
 const propInfo = {
@@ -83,7 +86,7 @@ const defaultProps = {
 	srclang: 'en',
 	kind: 'subtitles'
 };
-export default atomize(Track)({
+export default atomize(TrackComponent)({
 	name: 'Track',
 	description: {
 		en: 'Indicates timed text tracks for Video, and Audio components',

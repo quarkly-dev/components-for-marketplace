@@ -22,10 +22,9 @@ export default (() => {
 					Mobile Side Panel
 				</Text>
 			</Box>
-			<Components.MobileSidePanel menuPosition="full">
+			<Components.MobileSidePanel menuPosition="near">
 				<Text lg-font="18px/1.7 sans-serif" font="18px/1.7 sans-serif">
 					<Strong
-						data-q-widget-type="PRIMITIVE"
 						overflow-wrap="normal"
 						word-break="normal"
 						white-space="normal"
@@ -41,6 +40,7 @@ export default (() => {
 				</Text>
 			</Components.MobileSidePanel>
 			<Box quarkly-title="Props" height="auto" min-height="20px">
+				<Components.MobileSidePanel />
 				<Text font="600 24px sans-serif" quarkly-title="Title">
 					Пропсы:
 				</Text>
@@ -174,7 +174,7 @@ export default (() => {
 						Брейкпоинт с которого изменять на мобильный вид
 					</Text>
 					<Text width="100%" font="18px sans-serif" padding="15px 15px 15px 15px" margin="0 0 0 0">
-						on
+						md{" "}
 					</Text>
 				</Box>
 				<Box

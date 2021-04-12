@@ -21,6 +21,13 @@ export default (() => {
 					Vimeo
 				</Text>
 			</Box>
+			<Components.Vimeo
+				controls
+				autopause
+				playBackground={false}
+				responsive
+				video="187987907"
+			/>
 			<Components.Vimeo controls autopause playBackground={false} responsive />
 			<Box quarkly-title="Props" height="auto" min-height="20px">
 				<Text font="600 24px sans-serif" quarkly-title="Title">

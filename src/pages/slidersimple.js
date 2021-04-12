@@ -222,7 +222,7 @@ export default (() => {
 						Высота слайдера (процент от ширины слайдера)
 					</Text>
 					<Text width="100%" font="18px sans-serif" padding="15px 15px 15px 15px" margin="0 0 0 0">
-						62б5%
+						62,5%
 					</Text>
 				</Box>
 				<Box

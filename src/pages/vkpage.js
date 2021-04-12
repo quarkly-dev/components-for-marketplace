@@ -20,7 +20,7 @@ export default (() => {
 				<Text text-align="center" font="--headline1">
 					VK Page
 				</Text>
-				<Components.VkPage />
+				<Components.VkPage groupId="175635117" />
 			</Box>
 			<Box quarkly-title="Props" height="auto" min-height="20px">
 				<Text font="600 24px sans-serif" quarkly-title="Title">
@@ -325,7 +325,7 @@ export default (() => {
 					{" "}
 				</Box>
 			</Box>
-			<Components.VkPage />
+			<Components.VkPage wide={false} viewMode="News" />
 		</Box>
 		<Link
 			font={"--capture"}

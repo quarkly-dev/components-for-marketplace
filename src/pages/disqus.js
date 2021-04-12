@@ -3,6 +3,7 @@ import theme from "theme";
 import { Theme, Link, Text, Box, Strong, Span } from "@quarkly/widgets";
 import { Helmet } from "react-helmet";
 import { GlobalQuarklyPageStyles } from "global-page-styles";
+import { Override } from "@quarkly/components";
 import * as Components from "components";
 export default (() => {
 	return <Theme theme={theme}>
@@ -18,12 +19,15 @@ export default (() => {
 		<Box padding="0px 30px 50px 30px" quarkly-title="Wrapper">
 			<Box margin="50px 0px 100px 0px" quarkly-title="Header">
 				<Text text-align="center" font="--headline1">
-					Discus
+					Disqus
 				</Text>
 			</Box>
-			<Components.Disqus />
+			<Components.Disqus identifierProp="sasdasd" languageProp="en">
+				<Override slot="Disqus Content" languageProp="en" width="auto" />
+			</Components.Disqus>
+			<Components.Disqus margin="500px 100 500px 100px" />
 			<Box quarkly-title="Props" height="auto" min-height="20px">
-				<Text font="600 24px sans-serif" quarkly-title="Title">
+				<Text font="600 24px sans-serif" quarkly-title="Title" margin="76px 0px 16px 0px">
 					Пропсы:
 				</Text>
 				<Box
@@ -88,7 +92,16 @@ export default (() => {
 						border-color="#eaeaea"
 					>
 						Имя вашей ленты. Подробнее здесь:{" "}
-						<Link href="https://help.disqus.com/en/articles/1717111-what-s-a-shortname" target="_blank">
+						<Link
+							href="https://help.disqus.com/en/articles/1717111-what-s-a-shortname"
+							target="_blank"
+							overflow-wrap="normal"
+							word-break="normal"
+							white-space="normal"
+							text-indent="0"
+							text-overflow="clip"
+							hyphens="manual"
+						>
 							ссылка
 						</Link>
 					</Text>
@@ -245,7 +258,6 @@ export default (() => {
 						border-color="#eaeaea"
 					>
 						<Strong
-							data-q-widget-type="PRIMITIVE"
 							overflow-wrap="normal"
 							word-break="normal"
 							white-space="normal"
@@ -259,7 +271,6 @@ export default (() => {
 						<br />
 						<br />
 						<Span
-							data-q-widget-type="PRIMITIVE"
 							overflow-wrap="normal"
 							word-break="normal"
 							white-space="normal"
@@ -270,7 +281,6 @@ export default (() => {
 							Подробнее тут:
 						</Span>
 						<Strong
-							data-q-widget-type="PRIMITIVE"
 							overflow-wrap="normal"
 							word-break="normal"
 							white-space="normal"
@@ -282,7 +292,6 @@ export default (() => {
 							<Link
 								href="https://help.disqus.com/en/articles/1717084-javascript-configuration-variables"
 								target="_blank"
-								data-q-widget-type="PRIMITIVE"
 								overflow-wrap="normal"
 								word-break="normal"
 								white-space="normal"

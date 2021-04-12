@@ -3,6 +3,7 @@ import theme from "theme";
 import { Theme, Link, Text, Box, Strong } from "@quarkly/widgets";
 import { Helmet } from "react-helmet";
 import { GlobalQuarklyPageStyles } from "global-page-styles";
+import { Override } from "@quarkly/components";
 import * as Components from "components";
 export default (() => {
 	return <Theme theme={theme}>
@@ -22,9 +23,15 @@ export default (() => {
 				</Text>
 			</Box>
 			<Components.Collapse>
+				<Override slot="Button" disabled />
+			</Components.Collapse>
+			<Box />
+			<Components.Collapse animFunction="ease-in">
+				<Override slot="Button">
+					Toggle
+				</Override>
 				<Text font="18px/1.7 sans-serif" padding="10px 15px 10px 15px">
 					<Strong
-						data-q-widget-type="PRIMITIVE"
 						overflow-wrap="normal"
 						word-break="normal"
 						white-space="normal"
@@ -38,7 +45,6 @@ export default (() => {
 					<br />
 					<br />
 					<Strong
-						data-q-widget-type="PRIMITIVE"
 						overflow-wrap="normal"
 						word-break="normal"
 						white-space="normal"
@@ -50,7 +56,7 @@ export default (() => {
 						<br />
 					</Strong>
 					<br />
-					It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).{"\n\n"}
+					It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
 				</Text>
 			</Components.Collapse>
 			<Box margin="50px 0px 0px 0px">
@@ -123,7 +129,7 @@ export default (() => {
 					border-style="solid"
 					border-color="#eaeaea"
 				>
-					Max animation duration (in seconds){"\n\n"}
+					Max animation duration (in seconds)
 				</Text>
 				<Text
 					width="100%"
@@ -161,7 +167,9 @@ export default (() => {
 					border-style="solid"
 					border-color="#eaeaea"
 				>
-					Показать / Скрыть стрелочку
+					Cкорость течения анимации
+					<br />
+					{"\n\n"}
 				</Text>
 				<Text width="100%" font="18px sans-serif" padding="15px 15px 15px 15px" margin="0 0 0 0">
 					Linear

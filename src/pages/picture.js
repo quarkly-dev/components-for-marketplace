@@ -21,8 +21,8 @@ export default (() => {
 					Picture
 				</Text>
 			</Box>
-			<Components.Picture />
 			<Box quarkly-title="Props" height="auto" min-height="20px">
+				<Components.Picture />
 				<Text font="600 24px sans-serif" quarkly-title="Title">
 					Пропсы:
 				</Text>

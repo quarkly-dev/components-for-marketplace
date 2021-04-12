@@ -27,6 +27,7 @@ export default (() => {
 				</Text>
 			</Box>
 			<Box quarkly-title="Props" height="auto" min-height="20px">
+				<Components.LiveChat chatBetweenGroups="enable" />
 				<Text font="600 24px sans-serif" quarkly-title="Title">
 					Пропсы:
 				</Text>
@@ -127,7 +128,16 @@ export default (() => {
 						Номер группы
 						<br />
 						(Инструкция по созданию групп -{" "}
-						<Link href="https://www.livechat.com/help/dividing-live-chat-by-group/" target="_blank">
+						<Link
+							href="https://www.livechat.com/help/dividing-live-chat-by-group/"
+							target="_blank"
+							overflow-wrap="normal"
+							word-break="normal"
+							white-space="normal"
+							text-indent="0"
+							text-overflow="clip"
+							hyphens="manual"
+						>
 							ссылка
 						</Link>
 					</Text>
@@ -153,7 +163,6 @@ export default (() => {
 					>
 						Chat sessions between{" "}
 						<Span
-							data-q-widget-type="PRIMITIVE"
 							overflow-wrap="normal"
 							word-break="normal"
 							white-space="normal"
@@ -179,7 +188,6 @@ enable, disable]
 						(В случае, если установлены несколько чатов из разных групп, сеанс будет один)
 						<Link
 							href="https://beta.quarkly.io/preview#/livechat"
-							data-q-widget-type="PRIMITIVE"
 							overflow-wrap="normal"
 							word-break="normal"
 							white-space="normal"

@@ -1,7 +1,21 @@
-import React from 'react';
+import React, { useState, useMemo, useEffect, useRef } from 'react';
 import atomize from '@quarkly/atomize';
+import { useOverrides } from '@quarkly/components';
+import ComponentNotice from './ComponentNotice';
+const overrides = {
+	'Video Tag': {
+		kind: 'Video Tag',
+		props: {
+			'width': '100%',
+			'height': 'auto'
+		}
+	}
+};
+const Video = atomize.video();
+const Wrapper = atomize.div();
+const Content = atomize.div();
 
-const Video = ({
+const VideoComponent = ({
 	src,
 	poster,
 	autoPlay,
@@ -12,11 +26,20 @@ const Video = ({
 	children,
 	...props
 }) => {
-	return <div {...props}>
-		<video
-			width='100%'
-			height='auto'
-			src={src}
+	const {
+		override,
+		rest
+	} = useOverrides(props, overrides);
+	const [isEmpty, setEmpty] = useState(false);
+	const contentRef = useRef(null);
+	const srcVal = useMemo(() => src.trim(), [src]);
+	const showNotice = useMemo(() => isEmpty && !srcVal, [isEmpty, srcVal]);
+	useEffect(() => {
+		setEmpty(contentRef.current?.innerHTML === '<!--child placeholder-->');
+	}, [children]);
+	return <Wrapper {...rest}>
+		<Video
+			src={srcVal}
 			poster={poster}
 			autoPlay={autoPlay}
 			controls={controls}
@@ -24,12 +47,17 @@ const Video = ({
 			loop={loop}
 			onMouseEnter={playOnHover ? e => e.target.play() : undefined}
 			onMouseLeave={playOnHover ? e => e.target.pause() : undefined}
+			{...override('Video Tag')}
+			display={showNotice && 'none'}
 		>
-			{React.Children.map(children, child => React.isValidElement(child) ? React.cloneElement(child, {
-				container: 'video'
-			}) : child)}
-		</video>
-	</div>;
+			<Content ref={contentRef}>
+				{React.Children.map(children, child => React.isValidElement(child) && React.cloneElement(child, {
+					container: 'video'
+				}))}
+			</Content>
+		</Video>
+		{showNotice && <ComponentNotice message={'Добавьте свойство SRC или перетащите сюда компонент "Source"'} />}
+	</Wrapper>;
 };
 
 const propInfo = {
@@ -112,11 +140,11 @@ const propInfo = {
 	}
 };
 const defaultProps = {
-	src: 'https://uploads.quarkly.io/molecules/default-video.mp4',
-	poster: 'https://uploads.quarkly.io/molecules/default-video-poster.png',
+	src: '',
+	poster: '',
 	controls: true
 };
-export default atomize(Video)({
+export default atomize(VideoComponent)({
 	name: 'Video',
 	description: {
 		en: 'Container for embedding video content',

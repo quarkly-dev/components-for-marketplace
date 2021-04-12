@@ -54,7 +54,13 @@ export default {
 				"604b6938652a1e001e075df7",
 				"605073392b962f001e743029",
 				"6051c4c3652a1e001e076677",
-				"6051d2d6c8e036001ed13bc6"
+				"6051d2d6c8e036001ed13bc6",
+				"605b41432b962f001e7435c5",
+				"60631b1588a644001fa9baae",
+				"6065f3d3652a1e001e0773c1",
+				"6065f4ecc8e036001ed14911",
+				"606f0a9063816800228164a9",
+				"607467be0ba79600228c1fec"
 			]
 		},
 		"60474504627982001eb71a54": {
@@ -285,7 +291,7 @@ export default {
 		},
 		"6050687c2b962f001e742fad": {
 			"id": "6050687c2b962f001e742fad",
-			"pageUrl": "sfsd111111111111111111111111111111111",
+			"pageUrl": "animation",
 			"name": "Animation"
 		},
 		"60506bd688a644001fa9ae9a": {
@@ -305,8 +311,48 @@ export default {
 		},
 		"6051d2d6c8e036001ed13bc6": {
 			"id": "6051d2d6c8e036001ed13bc6",
-			"pageUrl": "sfsd1111111111111111111111111111111111111",
+			"pageUrl": "timer",
+			"name": "Timer"
+		},
+		"605b41432b962f001e7435c5": {
+			"id": "605b41432b962f001e7435c5",
+			"pageUrl": "cardflip",
+			"name": "Card Flip"
+		},
+		"60631b1588a644001fa9baae": {
+			"id": "60631b1588a644001fa9baae",
+			"pageUrl": "counter",
+			"name": "Counter"
+		},
+		"6064981b2b962f001e743cbf": {
+			"id": "6064981b2b962f001e743cbf",
+			"pageUrl": "sfsd11111111111111111111111111111111111111111",
 			"name": "STANDART"
+		},
+		"6064981cc8e036001ed147ad": {
+			"id": "6064981cc8e036001ed147ad",
+			"pageUrl": "sfsd11111111111111111111111111111111111111111",
+			"name": "STANDART"
+		},
+		"6065f3d3652a1e001e0773c1": {
+			"id": "6065f3d3652a1e001e0773c1",
+			"pageUrl": "scrollindicator",
+			"name": "Scroll Indicator"
+		},
+		"6065f4ecc8e036001ed14911": {
+			"id": "6065f4ecc8e036001ed14911",
+			"pageUrl": "pdfviewer",
+			"name": "PDF Viewer"
+		},
+		"606f0a9063816800228164a9": {
+			"id": "606f0a9063816800228164a9",
+			"pageUrl": "screen-page",
+			"name": "Screen Page"
+		},
+		"607467be0ba79600228c1fec": {
+			"id": "607467be0ba79600228c1fec",
+			"pageUrl": "form1",
+			"name": "YoomoneyDonateForm"
 		}
 	},
 	"mode": "production",
@@ -314,7 +360,10 @@ export default {
 	"site": {
 		"styles": {
 			"padding": "",
-			"margin": ""
+			"margin": "",
+			"display": "",
+			"justify-content": "",
+			"align-items": ""
 		},
 		"seo": {}
 	}

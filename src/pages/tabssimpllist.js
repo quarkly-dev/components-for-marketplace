@@ -25,16 +25,31 @@ export default (() => {
 			</Box>
 			<Components.TabsSimpleList>
 				<Override slot="Tab 604f529870ff0ce45c692989">
-					Вкладка 2
+					Tab 3
 				</Override>
-				<Override slot="Tab" disabled={false} />
-				<Override slot="Tab :active">
-					Вкладка 1
+				<Override
+					slot="Tab"
+					disabled={false}
+					margin="0px 5px 0px 5px"
+					background="#dddddd"
+					border-color="#000000"
+					color="#000000"
+					border-width="1px"
+					border-style="solid"
+				/>
+				<Override slot="Tab :active" background="#575758" color="#ffffff">
+					Tab 2
 				</Override>
+				<Override slot="Tab 605c6ef452f38e215e3e20bc">
+					Tab 1
+				</Override>
+				<Override slot="Tab 604f52e17546ec79ba2b0938">
+					Tab 2
+				</Override>
+				<Components.TabsSimpleItem />
 				<Components.TabsSimpleItem>
 					<Text font="18px/1.7 sans-serif">
 						<Strong
-							data-q-widget-type="PRIMITIVE"
 							overflow-wrap="normal"
 							word-break="normal"
 							white-space="normal"
@@ -179,7 +194,9 @@ export default (() => {
 						border-style="solid"
 						border-color="#eaeaea"
 					>
-						????
+						TabId вкладки, когда она не контролируется
+						<br />
+						{"\n\n\n\n"}
 					</Text>
 					<Text width="100%" font="18px sans-serif" padding="15px 15px 15px 15px" margin="0 0 0 0">
 						none
@@ -251,7 +268,7 @@ export default (() => {
 						border-style="solid"
 						border-color="#eaeaea"
 					>
-						????
+						Идентификатор панели, отображаемый при нажатии{"\n\n"}
 					</Text>
 					<Text width="100%" font="18px sans-serif" padding="15px 15px 15px 15px" margin="0 0 0 0">
 						none

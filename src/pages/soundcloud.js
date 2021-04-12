@@ -25,7 +25,6 @@ export default (() => {
 						Ошибка при публикации:{" "}
 						<Link
 							href="https://app.netlify.com/sites/hungry-wozniak-7150fd/deploys/604b8f9a39bba01cb86cdbc9"
-							data-q-widget-type="PRIMITIVE"
 							overflow-wrap="normal"
 							word-break="normal"
 							white-space="normal"
@@ -39,6 +38,8 @@ export default (() => {
 				</Text>
 			</Box>
 			<Box quarkly-title="Props" height="auto" min-height="20px">
+				<Components.SoundCloud url="https://soundcloud.com/itskaasi/who-you-are?in=mightyj-1/sets/morning-chillout" />
+				<Components.SoundCloud url="https://soundcloud.com/itskaasi/who-you-are?in=mightyj-1/sets/morning-chillout" type="visual" height="300px" />
 				<Text font="600 24px sans-serif" quarkly-title="Title">
 					Пропсы:
 				</Text>
