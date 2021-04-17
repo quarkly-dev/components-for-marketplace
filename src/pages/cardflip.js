@@ -1,6 +1,6 @@
 import React from "react";
 import theme from "theme";
-import { Theme, Link, Text, Box, Strong, Icon } from "@quarkly/widgets";
+import { Theme, Link, Text, Box, Strong, Button, Icon } from "@quarkly/widgets";
 import { Helmet } from "react-helmet";
 import { GlobalQuarklyPageStyles } from "global-page-styles";
 import { Override } from "@quarkly/components";
@@ -20,20 +20,42 @@ export default (() => {
 		<Box padding="0px 30px 50px 30px" quarkly-title="Wrapper">
 			<Box margin="50px 0px 100px 0px" quarkly-title="Header">
 				<Text text-align="center" font="--headline1">
-					Card Flip
+					Slider
 				</Text>
 			</Box>
-			<Components.CardFlip aspectRatioProp="4:3" margin="0px auto 0px auto">
-				<Override slot="Flip Card Item" />
-				<Text font="--headline2">
-					Glasgow Street Art{"\n\n"}
+			<Box display="flex" margin="500px 0px 50 0px">
+				<Components.CardFlip margin="0px auto 0px auto" flipTriggerProp="Click">
+					<Override slot="Flip Card Item" />
+					<Override slot="Flip Card Image" src="https://romanbabad.ucoz.net/src/aba/1/default-picture-1440.png" />
+					<Override slot="Flip Wrapper" display="inline-block" />
+					<Text font="--headline2">
+						<Strong>
+							Lorem Ipsum
+						</Strong>
+						{" \n\n"}
+					</Text>
+					<Text font="20px/1.7 --fontFamily-sans">
+						<Strong
+							overflow-wrap="normal"
+							word-break="normal"
+							white-space="normal"
+							text-indent="0"
+							text-overflow="clip"
+							hyphens="manual"
+						>
+							Lorem Ipsum
+						</Strong>
+						{" "}is simply dummy text of the prthe leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum{"\n\n"}
+					</Text>
+				</Components.CardFlip>
+			</Box>
+			<Components.CardFlip flipTriggerProp="Click">
+				<Text>
+					Some text
 				</Text>
-				<Text font="20px/1.7 --fontFamily-sans">
-					<Strong>
-						Lorem Ipsum
-					</Strong>
-					{" "}is simply dummy text of the prthe leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum{"\n\n"}
-				</Text>
+				<Button>
+					Button
+				</Button>
 			</Components.CardFlip>
 			<Box margin="50px 0px 0px 0px" quarkly-title="Architecture">
 				<Text font="600 24px sans-serif" quarkly-title="Title">

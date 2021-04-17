@@ -3,7 +3,7 @@ import theme from "theme";
 import { Theme, Link, Text, Box, Image, Icon, Input, Button } from "@quarkly/widgets";
 import { Helmet } from "react-helmet";
 import { GlobalQuarklyPageStyles } from "global-page-styles";
-import { StackItem, Stack, Section, Override, Formspree } from "@quarkly/components";
+import { Override, StackItem, Stack, Section, Formspree } from "@quarkly/components";
 import * as Components from "components";
 import { MdLocationOn, MdEmail, MdPhone } from "react-icons/md";
 import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
@@ -17,7 +17,9 @@ export default (() => {
 			<meta name={"description"} content={"Web site created using quarkly.io"} />
 			<link rel={"shortcut icon"} href={"https://uploads.quarkly.io/readme/cra/favicon-32x32.ico"} type={"image/x-icon"} />
 		</Helmet>
-		<Components.BackToTop />
+		<Components.ScrollIndicator>
+			<Override slot="Indicator" background="#0077cc" />
+		</Components.ScrollIndicator>
 		<Section
 			padding="140px 0"
 			sm-padding="40px 0"

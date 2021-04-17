@@ -27,7 +27,6 @@ export default (() => {
 				</Text>
 			</Box>
 			<Box quarkly-title="Props" height="auto" min-height="20px">
-				<Components.LiveChat chatBetweenGroups="enable" />
 				<Text font="600 24px sans-serif" quarkly-title="Title">
 					Пропсы:
 				</Text>

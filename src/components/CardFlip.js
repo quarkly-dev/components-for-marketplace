@@ -1,44 +1,49 @@
-import React, { useMemo, useCallback, useState } from 'react';
+import React, { useMemo, useCallback, useState, useEffect } from 'react';
 import { useOverrides } from '@quarkly/components';
 import { Box, Image } from '@quarkly/widgets';
 const overrides = {
-	'Flip Wrapper': {
-		'kind': 'Box',
-		'props': {
+	'Flip Card Content': {
+		kind: 'Box',
+		props: {
+			'width': '100%',
+			'min-width': '0',
+			'min-height': '0',
+			'transform-style': 'preserve-3d',
 			'position': 'relative',
-			'width': '400px',
-			'perspective': '600px'
+			'cursor': 'pointer'
 		}
 	},
-	'Flip Card Content': {
-		'kind': 'Box'
-	},
 	'Flip Card Image': {
-		'kind': 'Image',
-		'props': {
-			'src': 'https://images.unsplash.com/photo-1615921773341-e87e0771e323?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&h=2000',
+		kind: 'Image',
+		props: {
 			'width': '100%',
 			'height': '100%',
-			'object-fit': 'cover',
-			'object-position': '50% 50%'
+			'src': 'https://uploads.quarkly.io/molecules/default-picture-1200.png',
+			'object-position': '50% 50%',
+			'object-fit': 'cover'
 		}
 	},
 	'Flip Card Item': {
-		'kind': 'Box',
-		'props': {
-			'position': 'absolute',
+		kind: 'Box',
+		props: {
 			'top': '0',
-			'bottom': '0',
 			'left': '0',
-			'right': '0',
-			'backface-visibility': 'hidden'
+			'width': '100%',
+			'height': '100%',
+			'backface-visibility': 'hidden',
+			'position': 'absolute'
 		}
 	},
-	'Flip Card Item :Face': {
-		'kind': 'Box'
+	'Flip Card Item Face': {
+		kind: 'Box'
 	},
-	'Flip Card Item :Back': {
-		'kind': 'Box'
+	'Flip Card Item Back': {
+		kind: 'Box',
+		props: {
+			'padding': '24px 16px',
+			'background': '--color-lightD2',
+			'box-sizing': 'border-box'
+		}
 	}
 };
 const flipStyles = {
@@ -55,6 +60,14 @@ const flipStyles = {
 		transform: 'rotateX(-180deg)'
 	}
 };
+const cardHeights = {
+	'auto': 'auto',
+	'16:9': '56.25%',
+	'4:3': '75%',
+	'1:1': '100%',
+	'3:4': '133.33%',
+	'9:16': '177.78%'
+};
 
 const FlipCard = ({
 	flipTriggerProp,
@@ -62,85 +75,45 @@ const FlipCard = ({
 	flipDurationProp,
 	timingFunctionProp,
 	aspectRatioProp,
-	children,
+	isFlippedProp,
 	...props
 }) => {
-	const [isFlipped, setFlipped] = useState(false);
+	const {
+		override,
+		children,
+		rest
+	} = useOverrides(props, overrides);
+	const [isFlipped, setFlipped] = useState(isFlippedProp);
 	const flipTrigger = useMemo(() => flipTriggerProp === 'Click', [flipTriggerProp]);
-	const aspectRatioPercent = useMemo(() => {
-		let precent;
-
-		switch (aspectRatioProp) {
-			case '16:9':
-				precent = '56.25%';
-				break;
-
-			case '4:3':
-				precent = '75%';
-				break;
-
-			case '1:1':
-				precent = '100%';
-				break;
-
-			case '3:4':
-				precent = '133.33%';
-				break;
-
-			case '9:16':
-				precent = '156.25%';
-				break;
-
-			default:
-				precent = 'auto';
-		}
-
-		;
-		return precent;
-	}, [aspectRatioProp]);
 	const flipDuration = useMemo(() => flipDurationProp.replace(/\s+/g, ''), [flipDurationProp]);
 	const currentStyles = useMemo(() => flipStyles[flipDirectionProp], [flipDirectionProp]);
 	const onClickFlip = useCallback(() => {
-		if (flipTrigger) {
-			setFlipped(!isFlipped);
-		}
+		if (flipTrigger) setFlipped(!isFlipped);
 	}, [isFlipped]);
 	const onHoverFlip = useCallback(() => {
-		if (!flipTrigger) {
-			setFlipped(!isFlipped);
-		}
+		if (!flipTrigger) setFlipped(!isFlipped);
 	}, [isFlipped]);
-	const {
-		override,
-		rest
-	} = useOverrides(props, overrides);
-	console.log({ ...override('Flip Card Content')
-	});
+	useEffect(() => {
+		setFlipped(isFlippedProp);
+	}, [isFlippedProp]);
 	return <Box
-		{...override(`Flip Wrapper`)}
-		height={aspectRatioPercent === 'auto' ? '500px' : 'auto'}
-		{...rest}
-		onClick={onClickFlip}
+		height={aspectRatioProp === 'auto' ? '500px' : 'auto'}
 		onMouseEnter={onHoverFlip}
 		onMouseLeave={onHoverFlip}
+		onClick={onClickFlip}
+		{...rest}
 	>
 		<Box
-			padding-top={aspectRatioPercent}
-			width='100%'
-			height={aspectRatioPercent === 'auto' ? '100%' : 'auto'}
-			min-width='0'
-			min-height='0'
-			transform-style='preserve-3d'
-			position='relative'
-			cursor='pointer'
 			transition={`transform ${flipDuration}ms ${timingFunctionProp}`}
 			{...override('Flip Card Content')}
 			{...isFlipped && currentStyles}
+			padding-top={aspectRatioProp !== 'auto' ? cardHeights[aspectRatioProp] : undefined}
+			height={aspectRatioProp !== 'auto' ? '0' : '100%'}
 		>
-			<Box {...override(`Flip Card Item`, `Flip Card Item :Face`)}>
+			<Box {...override(`Flip Card Item`, `Flip Card Item Face`)}>
 				<Image {...override('Flip Card Image')} />
 			</Box>
-			<Box {...override(`Flip Card Item`, `Flip Card Item :Back`)} {...currentStyles}>
+			<Box {...override(`Flip Card Item`, `Flip Card Item Back`)} {...currentStyles}>
 				{children}
 			</Box>
 		</Box>
@@ -196,6 +169,15 @@ const propInfo = {
 		variants: ['ease', 'ease-in', 'ease-out', 'ease-in-out', 'linear', 'step-start', 'step-end'],
 		category: 'Animation params',
 		weight: .5
+	},
+	isFlippedProp: {
+		title: 'Перевернуть карточку',
+		description: {
+			en: 'Перевернуть карточку для теста'
+		},
+		control: 'checkbox',
+		category: 'Test',
+		weight: 1
 	}
 };
 const defaultProps = {
@@ -203,11 +185,14 @@ const defaultProps = {
 	flipDirectionProp: 'toRight',
 	aspectRatioProp: 'auto',
 	flipDurationProp: '1000',
-	timingFunctionProp: 'cubic-bezier(.50,-0.35,.50,1.65)'
+	timingFunctionProp: 'cubic-bezier(.50,-0.35,.50,1.65)',
+	isFlippedProp: false,
+	'width': '400px',
+	'position': 'relative',
+	'perspective': '600px'
 };
 export default Object.assign(FlipCard, {
 	overrides,
 	propInfo,
 	defaultProps
 });
-;

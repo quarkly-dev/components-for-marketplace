@@ -1,13 +1,13 @@
 import React from "react";
 import theme from "theme";
-import { Theme, Link, Text, Box, Icon } from "@quarkly/widgets";
+import { Theme, Link, Text, Box } from "@quarkly/widgets";
 import { Helmet } from "react-helmet";
 import { GlobalQuarklyPageStyles } from "global-page-styles";
+import { Override } from "@quarkly/components";
 import * as Components from "components";
-import { MdKeyboardArrowRight } from "react-icons/md";
 export default (() => {
 	return <Theme theme={theme}>
-		<GlobalQuarklyPageStyles pageUrl={"animation"} />
+		<GlobalQuarklyPageStyles pageUrl={"slider"} />
 		<Helmet>
 			<title>
 				Quarkly export
@@ -19,69 +19,85 @@ export default (() => {
 		<Box padding="0px 30px 50px 30px" quarkly-title="Wrapper">
 			<Box margin="50px 0px 100px 0px" quarkly-title="Header">
 				<Text text-align="center" font="--headline1">
-					Animation
+					Slider
 				</Text>
 			</Box>
-			<Components.Animation
-				iteration="infinite"
-				test
-				timingFunction="ease"
-				duration="2s"
-				animation="↑ Slide In"
-				lg-margin="500px 0px 500px 0px"
-			>
-				<Text quarkly-title="Lorem" font="normal 20px/150% sans-serif">
-					<br />
-					<br />
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.{"\n\n\n"}
-				</Text>
-			</Components.Animation>
 			<Box margin="50px 0px 0px 0px" quarkly-title="Architecture">
-				<Text font="600 24px sans-serif" quarkly-title="Title">
-					Архитектура:
-				</Text>
-				<Box
-					margin="0px 0px 50px 0px"
-					display="flex"
-					quarkly-title="Content"
-					align-items="center"
-					justify-content="center"
-					text-align="center"
-					border-width="2px"
-					border-style="solid"
-					border-color="#d3d3d3"
-				>
-					<Box display="flex" align-items="center" quarkly-title="Item" width="100%">
-						<Text
-							width="100%"
-							font="18px sans-serif"
-							margin="0 0 0 0"
-							padding="15px 0px 15px 0px"
-							height="auto"
-							min-height="20px"
-						>
-							Animation
-						</Text>
-						<Icon category="md" icon={MdKeyboardArrowRight} size="40px" color="#747272" />
-					</Box>
-					<Box display="flex" align-items="center" quarkly-title="Item" width="100%">
-						<Text
-							width="100%"
-							font="18px sans-serif"
-							margin="0 0 0 0"
-							padding="15px 0px 15px 0px"
-							height="auto"
-							min-height="20px"
-						>
-							Animation Presets
-						</Text>
-						<Icon category="md" icon={MdKeyboardArrowRight} size="40px" color="#747272" />
-					</Box>
-				</Box>
+				<Components.Slider height="600px" margin="500px 0px 500 0px">
+					<Override slot="Slide Image" filter="brightness(40%) saturate(80%)" />
+					<Override slot="Arrow" background="none" />
+					<Override slot="Point Icon :active" border-color="none" color="#ffffff" />
+					<Override slot="Point Icon" padding="4px 5px 4px 5px" />
+					<Override slot="Point" opacity="0.4" />
+					<Override slot="Arrow Next" background="none" />
+					<Override slot="Arrow Prev" background="none" />
+					<Override slot="Points" height="60px" />
+				</Components.Slider>
+				<Components.Slider>
+					<Override slot="Slide Image" />
+					<Override slot="Arrow" background="none" />
+					<Override slot="Point Icon" padding="4px 5px 4px 5px" />
+					<Override slot="Point Icon :active" border-color="none" color="#ffffff" />
+					<Override slot="Point" opacity="0.4" />
+					<Override slot="Arrow Next" background="none" />
+					<Override slot="Arrow Prev" background="none" />
+					<Override slot="Slide Content" display="none" />
+					<Override
+						slot="Arrow Icon"
+						background="--color-light"
+						border-radius="50%"
+						color="--darkL2"
+						font="38px sans-serif"
+						size="38px"
+						width="48px"
+						height="48px"
+						padding="0px 0px 0px 0px"
+					/>
+				</Components.Slider>
+				<Components.Slider>
+					<Override slot="Slide Image" position="relative" display="block" flex="1 1 auto" />
+					<Override slot="Arrow" background="none" />
+					<Override slot="Point Icon" padding="4px 5px 4px 5px" />
+					<Override slot="Point Icon :active" border-color="none" color="#ffffff" />
+					<Override slot="Point" opacity="0.4" />
+					<Override slot="Arrow Next" background="none" />
+					<Override slot="Arrow Prev" background="none" />
+					<Override
+						slot="Slide Content"
+						width="100%"
+						display="flex"
+						position="relative"
+						top="0px"
+						left={0}
+						right={0}
+						bottom={0}
+						transform="none"
+						background="--color-lightD1"
+						justify-content="space-between"
+						align-items="flex-start"
+						padding="0px 16px 12px 16px"
+					/>
+					<Override
+						slot="Arrow Icon"
+						background="--color-light"
+						border-radius="50%"
+						color="--darkL2"
+						font="38px sans-serif"
+						size="38px"
+						width="48px"
+						height="48px"
+						padding="0px 0px 0px 0px"
+					/>
+					<Override slot="Slide" display="flex" flex-direction="column" />
+					<Override slot="Slide Head" color="--darkL2" width="100%" text-align="left" />
+					<Override slot="Slide Text" color="--darkL2" text-align="left" />
+					<Override slot="Slide Link" margin="16px 2px 16px 2px" />
+					<Override slot="Points" top="75%" />
+				</Components.Slider>
 			</Box>
 			<Box quarkly-title="Props" height="auto" min-height="20px">
 				<Text font="600 24px sans-serif" quarkly-title="Title">
-					Пропсы Animation:
+					Пропсы:
 				</Text>
 				<Box
 					display="flex"
@@ -133,7 +149,7 @@ export default (() => {
 						border-style="solid"
 						border-color="#eaeaea"
 					>
-						Trigger
+						Показать заголовок
 					</Text>
 					<Text
 						width="100%"
@@ -144,10 +160,10 @@ export default (() => {
 						border-style="solid"
 						border-color="#eaeaea"
 					>
-						Действие, вызывающее анимацию
+						Показать заголовок{"\n\n"}
 					</Text>
 					<Text width="100%" font="18px sans-serif" padding="15px 15px 15px 15px" margin="0 0 0 0">
-						-
+						true{" "}
 					</Text>
 				</Box>
 				<Box
@@ -155,7 +171,7 @@ export default (() => {
 					border-width="1px"
 					border-style="solid"
 					border-color="#eaeaea"
-					quarkly-title="Row 2"
+					quarkly-title="Row 1"
 				>
 					<Text
 						width="100%"
@@ -166,7 +182,7 @@ export default (() => {
 						border-style="solid"
 						border-color="#eaeaea"
 					>
-						Animation type
+						Показать описание
 					</Text>
 					<Text
 						width="100%"
@@ -177,10 +193,10 @@ export default (() => {
 						border-style="solid"
 						border-color="#eaeaea"
 					>
-						Тип анимации
+						Показать описание{"\n\n"}
 					</Text>
 					<Text width="100%" font="18px sans-serif" padding="15px 15px 15px 15px" margin="0 0 0 0">
-						Fade Out
+						true{"\n\n"}
 					</Text>
 				</Box>
 				<Box
@@ -188,7 +204,7 @@ export default (() => {
 					border-width="1px"
 					border-style="solid"
 					border-color="#eaeaea"
-					quarkly-title="Row 3"
+					quarkly-title="Row 1"
 				>
 					<Text
 						width="100%"
@@ -199,7 +215,7 @@ export default (() => {
 						border-style="solid"
 						border-color="#eaeaea"
 					>
-						Iteration Count
+						Показать кнопку
 					</Text>
 					<Text
 						width="100%"
@@ -210,10 +226,10 @@ export default (() => {
 						border-style="solid"
 						border-color="#eaeaea"
 					>
-						Повторяемость анимации [once, infinity]
+						Показать кнопку{"\n\n"}
 					</Text>
 					<Text width="100%" font="18px sans-serif" padding="15px 15px 15px 15px" margin="0 0 0 0">
-						once
+						true{"\n\n"}
 					</Text>
 				</Box>
 				<Box
@@ -221,7 +237,7 @@ export default (() => {
 					border-width="1px"
 					border-style="solid"
 					border-color="#eaeaea"
-					quarkly-title="Row 4"
+					quarkly-title="Row 1"
 				>
 					<Text
 						width="100%"
@@ -232,7 +248,7 @@ export default (() => {
 						border-style="solid"
 						border-color="#eaeaea"
 					>
-						Timing function
+						Показать стрелки{" "}
 					</Text>
 					<Text
 						width="100%"
@@ -243,10 +259,10 @@ export default (() => {
 						border-style="solid"
 						border-color="#eaeaea"
 					>
-						Cкорость течения анимации{"\n\n"}
+						Показать стрелки{" \n\n"}
 					</Text>
 					<Text width="100%" font="18px sans-serif" padding="15px 15px 15px 15px" margin="0 0 0 0">
-						none
+						true{" "}
 					</Text>
 				</Box>
 				<Box
@@ -254,7 +270,7 @@ export default (() => {
 					border-width="1px"
 					border-style="solid"
 					border-color="#eaeaea"
-					quarkly-title="Row 5"
+					quarkly-title="Row 1"
 				>
 					<Text
 						width="100%"
@@ -265,7 +281,7 @@ export default (() => {
 						border-style="solid"
 						border-color="#eaeaea"
 					>
-						Duration
+						Показать точки
 					</Text>
 					<Text
 						width="100%"
@@ -276,10 +292,10 @@ export default (() => {
 						border-style="solid"
 						border-color="#eaeaea"
 					>
-						Продолжительность анимации
+						Показать точки{"\n\n"}
 					</Text>
 					<Text width="100%" font="18px sans-serif" padding="15px 15px 15px 15px" margin="0 0 0 0">
-						1s{"\n\n"}
+						true{" "}
 					</Text>
 				</Box>
 				<Box
@@ -287,7 +303,7 @@ export default (() => {
 					border-width="1px"
 					border-style="solid"
 					border-color="#eaeaea"
-					quarkly-title="Row 6"
+					quarkly-title="Row 1"
 				>
 					<Text
 						width="100%"
@@ -298,7 +314,7 @@ export default (() => {
 						border-style="solid"
 						border-color="#eaeaea"
 					>
-						Delay before start
+						Длительность анимации
 					</Text>
 					<Text
 						width="100%"
@@ -309,10 +325,10 @@ export default (() => {
 						border-style="solid"
 						border-color="#eaeaea"
 					>
-						Задержка перед началом анимации
+						Длительность анимации{"\n\n"}
 					</Text>
 					<Text width="100%" font="18px sans-serif" padding="15px 15px 15px 15px" margin="0 0 0 0">
-						0s
+						0.5s
 					</Text>
 				</Box>
 				<Box
@@ -320,7 +336,7 @@ export default (() => {
 					border-width="1px"
 					border-style="solid"
 					border-color="#eaeaea"
-					quarkly-title="Row 7"
+					quarkly-title="Row 1"
 				>
 					<Text
 						width="100%"
@@ -331,7 +347,7 @@ export default (() => {
 						border-style="solid"
 						border-color="#eaeaea"
 					>
-						Play animation
+						Функция анимации
 					</Text>
 					<Text
 						width="100%"
@@ -342,12 +358,77 @@ export default (() => {
 						border-style="solid"
 						border-color="#eaeaea"
 					>
-						Включить анимацию для теста.
+						Скорость течения анимации
 					</Text>
 					<Text width="100%" font="18px sans-serif" padding="15px 15px 15px 15px" margin="0 0 0 0">
-						off
+						linear
 					</Text>
-					{" "}
+				</Box>
+				<Box
+					display="flex"
+					border-width="1px"
+					border-style="solid"
+					border-color="#eaeaea"
+					quarkly-title="Row 1"
+				>
+					<Text
+						width="100%"
+						font="18px sans-serif"
+						padding="15px 15px 15px 15px"
+						margin="0 0 0 0"
+						border-width="1px"
+						border-style="solid"
+						border-color="#eaeaea"
+					>
+						Количество слайдов
+					</Text>
+					<Text
+						width="100%"
+						font="18px sans-serif"
+						padding="15px 15px 15px 15px"
+						margin="0 0 0 0"
+						border-width="1px"
+						border-style="solid"
+						border-color="#eaeaea"
+					>
+						Количество слайдов{" "}
+					</Text>
+					<Text width="100%" font="18px sans-serif" padding="15px 15px 15px 15px" margin="0 0 0 0">
+						4
+					</Text>
+				</Box>
+				<Box
+					display="flex"
+					border-width="1px"
+					border-style="solid"
+					border-color="#eaeaea"
+					quarkly-title="Row 1"
+				>
+					<Text
+						width="100%"
+						font="18px sans-serif"
+						padding="15px 15px 15px 15px"
+						margin="0 0 0 0"
+						border-width="1px"
+						border-style="solid"
+						border-color="#eaeaea"
+					>
+						Соотношение сторон
+					</Text>
+					<Text
+						width="100%"
+						font="18px sans-serif"
+						padding="15px 15px 15px 15px"
+						margin="0 0 0 0"
+						border-width="1px"
+						border-style="solid"
+						border-color="#eaeaea"
+					>
+						Соотношение сторон слайдов
+					</Text>
+					<Text width="100%" font="18px sans-serif" padding="15px 15px 15px 15px" margin="0 0 0 0">
+						16:9
+					</Text>
 				</Box>
 			</Box>
 		</Box>

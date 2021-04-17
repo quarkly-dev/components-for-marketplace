@@ -25,7 +25,7 @@ export default (() => {
 			</Box>
 			<Components.LIghtBoxImage showImageProp={false} offLightboxProp={false} text-align="center">
 				<Override slot="Lightbox image" src="https://romanbabad.ucoz.net/src/aba/1/default-picture-1440.png" />
-				<Image width="300px" src="https://romanbabad.ucoz.net/src/aba/1/default-picture-1440.png" text-align="center" />
+				<Image width="500px" src="https://romanbabad.ucoz.net/src/aba/1/default-picture-1440.png" text-align="center" />
 			</Components.LIghtBoxImage>
 			<Box margin="50px 0px 100px 0px" quarkly-title="Header">
 				<Text text-align="center" font="--headline1">
@@ -34,7 +34,7 @@ export default (() => {
 			</Box>
 			<Components.LighBoxMap offLightboxProp={false} text-align="center">
 				<Button>
-					Открыть карту
+					Open Map
 				</Button>
 			</Components.LighBoxMap>
 			<Box margin="50px 0px 100px 0px" quarkly-title="Header">
@@ -48,14 +48,20 @@ export default (() => {
 					<Icon
 						category="md"
 						icon={MdPlayCircleFilled}
-						size="50px"
+						size="100px"
 						display="flex"
 						width="300px"
 						text-align="center"
 						justify-content="center"
 					/>
-					<Text display="flex" width="300px" text-align="center" justify-content="center">
-						Click Play
+					<Text
+						display="flex"
+						width="300px"
+						text-align="center"
+						justify-content="center"
+						font="700 20px sans-serif"
+					>
+						Play
 					</Text>
 				</Box>
 			</Components.LightBoxVideo>
