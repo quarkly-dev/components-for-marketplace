@@ -16,14 +16,13 @@ export default (() => {
 			<meta name={"description"} content={"Web site created using quarkly.io"} />
 			<link rel={"shortcut icon"} href={"https://uploads.quarkly.io/readme/cra/favicon-32x32.ico"} type={"image/x-icon"} />
 		</Helmet>
-		<Components.HeadMenu />
 		<Box padding="0px 30px 50px 30px" quarkly-title="Wrapper">
 			<Box margin="50px 0px 100px 0px" quarkly-title="Header">
 				<Text text-align="center" font="--headline1">
 					Accordion{"\n\n"}
 				</Text>
 			</Box>
-			<Components.Accordion allowMultiple allowToggle margin="500px 0px 500 0px">
+			<Components.Accordion allowMultiple allowToggle>
 				<Components.AccordionItem isOpen={false} disabled={false} border-width="0px">
 					<Components.AccordionItemSummary box-shadow="none" margin="0px 0px 0px 0px" font="--lead">
 						<Override slot="Accordion Summary" margin="0px 0px 5px 0px" background="white" box-shadow="inset 2px 2px 5px rgba(154, 147, 140, 0.5)" />
@@ -189,106 +188,38 @@ export default (() => {
 				<Text font="600 24px sans-serif" quarkly-title="Title">
 					Пропсы:
 				</Text>
-				<Box
-					display="flex"
-					border-width="1px"
-					border-style="solid"
-					border-color="#eaeaea"
-					quarkly-title="Header row"
-				>
-					<Text
-						width="100%"
-						font="18px sans-serif"
-						padding="15px 15px 15px 15px"
-						margin="0 0 0 0"
-						border-width="1px"
-						border-style="solid"
-						border-color="#eaeaea"
-					>
-						Название
-					</Text>
-					<Text
-						width="100%"
-						font="18px sans-serif"
-						padding="15px 15px 15px 15px"
-						margin="0 0 0 0"
-						border-width="1px"
-						border-style="solid"
-						border-color="#eaeaea"
-					>
-						Описание
-					</Text>
-					<Text width="100%" font="18px sans-serif" padding="15px 15px 15px 15px" margin="0 0 0 0">
-						Значение по дефолту
-					</Text>
-				</Box>
-				<Box quarkly-title="Space" />
-				<Box
-					display="flex"
-					border-width="1px"
-					border-style="solid"
-					border-color="#eaeaea"
-					quarkly-title="Row 1"
-				>
-					<Text
-						width="100%"
-						font="18px sans-serif"
-						padding="15px 15px 15px 15px"
-						margin="0 0 0 0"
-						border-width="1px"
-						border-style="solid"
-						border-color="#eaeaea"
-					>
-						Arrow multiple
-					</Text>
-					<Text
-						width="100%"
-						font="18px sans-serif"
-						padding="15px 15px 15px 15px"
-						margin="0 0 0 0"
-						border-width="1px"
-						border-style="solid"
-						border-color="#eaeaea"
-					>
-						Отображать несколько раскрытых вкладок одновременно
-					</Text>
-					<Text width="100%" font="18px sans-serif" padding="15px 15px 15px 15px" margin="0 0 0 0">
-						on
-					</Text>
-				</Box>
-				<Box
-					display="flex"
-					border-width="1px"
-					border-style="solid"
-					border-color="#eaeaea"
-					quarkly-title="Row 2"
-				>
-					<Text
-						width="100%"
-						font="18px sans-serif"
-						padding="15px 15px 15px 15px"
-						margin="0 0 0 0"
-						border-width="1px"
-						border-style="solid"
-						border-color="#eaeaea"
-					>
-						Arrow toogle
-					</Text>
-					<Text
-						width="100%"
-						font="18px sans-serif"
-						padding="15px 15px 15px 15px"
-						margin="0 0 0 0"
-						border-width="1px"
-						border-style="solid"
-						border-color="#eaeaea"
-					>
-						Возможность сворачивания всех вкладок
-					</Text>
-					<Text width="100%" font="18px sans-serif" padding="15px 15px 15px 15px" margin="0 0 0 0">
-						on
-					</Text>
-				</Box>
+				<Components.Table showHeader colsProp="3" width="100%" rowsProp="2">
+					<Override slot="Text THead Col-0">
+						Название{"\n\n"}
+					</Override>
+					<Override slot="Text THead Col-1">
+						Описание{"\n\n"}
+					</Override>
+					<Override slot="Text THead Col-2">
+						Значение по дефолту{"\n\n"}
+					</Override>
+					<Override slot="Text TBody Row-0 Col-0">
+						Arrow multiple{"\n\n"}
+					</Override>
+					<Override slot="Text TBody Row-1 Col-0">
+						Arrow toogle{"\n\n"}
+					</Override>
+					<Override slot="Text TBody Row-2 Col-0">
+						Arrow toogle{"\n\n"}
+					</Override>
+					<Override slot="Text TBody Row-0 Col-1">
+						Отображать несколько раскрытых вкладок одновременно{"\n\n"}
+					</Override>
+					<Override slot="Text TBody Row-1 Col-1">
+						Возможность сворачивания всех вкладок{"\n\n"}
+					</Override>
+					<Override slot="Text TBody Row-0 Col-2">
+						true
+					</Override>
+					<Override slot="Text TBody Row-1 Col-2">
+						true
+					</Override>
+				</Components.Table>
 			</Box>
 		</Box>
 		<Link

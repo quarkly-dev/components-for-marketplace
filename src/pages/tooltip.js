@@ -1,6 +1,6 @@
 import React from "react";
 import theme from "theme";
-import { Theme, Link, Text, Box, Hr, Strong } from "@quarkly/widgets";
+import { Theme, Link, Text, Box, Button, Hr, Strong } from "@quarkly/widgets";
 import { Helmet } from "react-helmet";
 import { GlobalQuarklyPageStyles } from "global-page-styles";
 import { Override } from "@quarkly/components";
@@ -15,272 +15,111 @@ export default (() => {
 			<meta name={"description"} content={"Web site created using quarkly.io"} />
 			<link rel={"shortcut icon"} href={"https://uploads.quarkly.io/readme/cra/favicon-32x32.ico"} type={"image/x-icon"} />
 		</Helmet>
-		<Components.HeadMenu />
 		<Box padding="0px 30px 0px 30px">
 			<Box margin="50px 0px 100px 0px">
 				<Text text-align="center" font="--headline1">
 					Tooltip
 				</Text>
 			</Box>
-			<Components.Tooltip arrowStatusProp tooltipStatusProp="always">
+			<Components.Tooltip arrowStatusProp tooltipStatusProp="hover" arrowOffsetProp="12px">
 				<Override slot="Title">
 					Hello
 				</Override>
-				<Override slot="Content" />
+				<Override slot="Content" text-align="center" />
+				<Button>
+					Button
+				</Button>
 			</Components.Tooltip>
 			<Box margin="50px 0px 0px 0px">
 				<Text font="600 24px sans-serif">
 					Пропсы:
 				</Text>
 			</Box>
-			<Box display="flex" border-width="1px" border-style="solid" border-color="#eaeaea">
-				<Text
-					width="100%"
-					font="18px sans-serif"
-					padding="15px 15px 15px 15px"
-					margin="0 0 0 0"
-					border-width="1px"
-					border-style="solid"
-					border-color="#eaeaea"
-				>
-					Название
-				</Text>
-				<Text
-					width="100%"
-					font="18px sans-serif"
-					padding="15px 15px 15px 15px"
-					margin="0 0 0 0"
-					border-width="1px"
-					border-style="solid"
-					border-color="#eaeaea"
-				>
-					Описание
-				</Text>
-				<Text width="100%" font="18px sans-serif" padding="15px 15px 15px 15px" margin="0 0 0 0">
-					Значение по дефолту
-				</Text>
-			</Box>
-			<Box />
-			<Box display="flex" border-width="1px" border-style="solid" border-color="#eaeaea">
-				<Text
-					width="100%"
-					font="18px sans-serif"
-					padding="15px 15px 15px 15px"
-					margin="0 0 0 0"
-					border-width="1px"
-					border-style="solid"
-					border-color="#eaeaea"
-				>
-					Размер стрелочки
-				</Text>
-				<Text
-					width="100%"
-					font="18px sans-serif"
-					padding="15px 15px 15px 15px"
-					margin="0 0 0 0"
-					border-width="1px"
-					border-style="solid"
-					border-color="#eaeaea"
-				>
-					Размер стрелочки
-				</Text>
-				<Text width="100%" font="18px sans-serif" padding="15px 15px 15px 15px" margin="0 0 0 0">
-					8px
-				</Text>
-			</Box>
-			<Box display="flex" border-width="1px" border-style="solid" border-color="#eaeaea">
-				<Text
-					width="100%"
-					font="18px sans-serif"
-					padding="15px 15px 15px 15px"
-					margin="0 0 0 0"
-					border-width="1px"
-					border-style="solid"
-					border-color="#eaeaea"
-				>
-					Отступ стрелочки
-				</Text>
-				<Text
-					width="100%"
-					font="18px sans-serif"
-					padding="15px 15px 15px 15px"
-					margin="0 0 0 0"
-					border-width="1px"
-					border-style="solid"
-					border-color="#eaeaea"
-				>
-					Отступ стрелочки от блока с контентом
-				</Text>
-				<Text width="100%" font="18px sans-serif" padding="15px 15px 15px 15px" margin="0 0 0 0">
-					4px
-				</Text>
-			</Box>
-			<Box display="flex" border-width="1px" border-style="solid" border-color="#eaeaea">
-				<Text
-					width="100%"
-					font="18px sans-serif"
-					padding="15px 15px 15px 15px"
-					margin="0 0 0 0"
-					border-width="1px"
-					border-style="solid"
-					border-color="#eaeaea"
-				>
-					ArroowStatusProp
-				</Text>
-				<Text
-					width="100%"
-					font="18px sans-serif"
-					padding="15px 15px 15px 15px"
-					margin="0 0 0 0"
-					border-width="1px"
-					border-style="solid"
-					border-color="#eaeaea"
-				>
-					Показать / Скрыть стрелочку
-				</Text>
-				<Text width="100%" font="18px sans-serif" padding="15px 15px 15px 15px" margin="0 0 0 0">
-					on
-				</Text>
-			</Box>
-			<Box display="flex" border-width="1px" border-style="solid" border-color="#eaeaea">
-				<Text
-					width="100%"
-					font="18px sans-serif"
-					padding="15px 15px 15px 15px"
-					margin="0 0 0 0"
-					border-width="1px"
-					border-style="solid"
-					border-color="#eaeaea"
-				>
-					Положение Tooltip
-				</Text>
-				<Text
-					width="100%"
-					font="18px sans-serif"
-					padding="15px 15px 15px 15px"
-					margin="0 0 0 0"
-					border-width="1px"
-					border-style="solid"
-					border-color="#eaeaea"
-				>
-					Положение стрелочки относительно блока с контентом. [top, bottom, left, right]
-				</Text>
-				<Text width="100%" font="18px sans-serif" padding="15px 15px 15px 15px" margin="0 0 0 0">
-					top
-				</Text>
-			</Box>
-			<Box display="flex" border-width="1px" border-style="solid" border-color="#eaeaea">
-				<Text
-					width="100%"
-					font="18px sans-serif"
-					padding="15px 15px 15px 15px"
-					margin="0 0 0 0"
-					border-width="1px"
-					border-style="solid"
-					border-color="#eaeaea"
-				>
-					Цвет Tooltip
-				</Text>
-				<Text
-					width="100%"
-					font="18px sans-serif"
-					padding="15px 15px 15px 15px"
-					margin="0 0 0 0"
-					border-width="1px"
-					border-style="solid"
-					border-color="#eaeaea"
-				>
-					Цвет Tooltip, включая цвет стрелочки
-				</Text>
-				<Text width="100%" font="18px sans-serif" padding="15px 15px 15px 15px" margin="0 0 0 0">
-					--color-dark
-				</Text>
-			</Box>
-			<Box display="flex" border-width="1px" border-style="solid" border-color="#eaeaea">
-				<Text
-					width="100%"
-					font="18px sans-serif"
-					padding="15px 15px 15px 15px"
-					margin="0 0 0 0"
-					border-width="1px"
-					border-style="solid"
-					border-color="#eaeaea"
-				>
-					Отступ от краев
-				</Text>
-				<Text
-					width="100%"
-					font="18px sans-serif"
-					padding="15px 15px 15px 15px"
-					margin="0 0 0 0"
-					border-width="1px"
-					border-style="solid"
-					border-color="#eaeaea"
-				>
-					Минимальное расстояние между Tooltip до любого края окна
-				</Text>
-				<Text width="100%" font="18px sans-serif" padding="15px 15px 15px 15px" margin="0 0 0 0">
-					0
-				</Text>
-			</Box>
-			<Box display="flex" border-width="1px" border-style="solid" border-color="#eaeaea">
-				<Text
-					width="100%"
-					font="18px sans-serif"
-					padding="15px 15px 15px 15px"
-					margin="0 0 0 0"
-					border-width="1px"
-					border-style="solid"
-					border-color="#eaeaea"
-				>
-					Показать Tooltip
-				</Text>
-				<Text
-					width="100%"
-					font="18px sans-serif"
-					padding="15px 15px 15px 15px"
-					margin="0 0 0 0"
-					border-width="1px"
-					border-style="solid"
-					border-color="#eaeaea"
-				>
+			<Components.Table width="100%" showHeader colsProp="3" rowsProp="8">
+				<Override slot="Text THead Col-0">
+					Название{"\n\n"}
+				</Override>
+				<Override slot="Text THead Col-1">
+					Описание{"\n\n"}
+				</Override>
+				<Override slot="Text THead Col-2">
+					Значение по дефолту{"\n\n"}
+				</Override>
+				<Override slot="Text TBody Row-0 Col-0">
+					Размер стрелочки{"\n\n"}
+				</Override>
+				<Override slot="Text TBody Row-0 Col-1">
+					Размер стрелочки{"\n\n"}
+				</Override>
+				<Override slot="Text TBody Row-0 Col-2">
+					8px{"\n\n"}
+				</Override>
+				<Override slot="Text TBody Row-1 Col-0">
+					Отступ стрелочки{"\n\n"}
+				</Override>
+				<Override slot="Text TBody Row-2 Col-0">
+					ArroowStatusProp{"\n\n"}
+				</Override>
+				<Override slot="Text TBody Row-3 Col-0">
+					Положение Tooltip{"\n\n"}
+				</Override>
+				<Override slot="Text TBody Row-4 Col-0">
+					Цвет Tooltip{"\n\n"}
+				</Override>
+				<Override slot="Text TBody Row-5 Col-0">
+					Отступ от краев{"\n\n"}
+				</Override>
+				<Override slot="Text TBody Row-6 Col-0">
+					Показать Tooltip{"\n\n"}
+				</Override>
+				<Override slot="Text TBody Row-7 Col-0">
+					Автоматическая смена положения Tooltip{"\n\n"}
+				</Override>
+				<Override slot="Text TBody Row-1 Col-1">
+					Отступ стрелочки от блока с контентом{"\n\n"}
+				</Override>
+				<Override slot="Text TBody Row-2 Col-1">
+					Показать / Скрыть стрелочку{"\n\n"}
+				</Override>
+				<Override slot="Text TBody Row-3 Col-1">
+					Положение стрелочки относительно блока с контентом. [top, bottom, left, right]{"\n\n"}
+				</Override>
+				<Override slot="Text TBody Row-4 Col-1">
+					Цвет Tooltip, включая цвет стрелочки{"\n\n"}
+				</Override>
+				<Override slot="Text TBody Row-5 Col-1">
+					Минимальное расстояние между Tooltip до любого края окна{"\n\n"}
+				</Override>
+				<Override slot="Text TBody Row-6 Col-1">
 					:always - Отображать всегда.
 					<br />
-					:hover - Отображать только  при наведении на блок с контентом
-				</Text>
-				<Text width="100%" font="18px sans-serif" padding="15px 15px 15px 15px" margin="0 0 0 0">
+					:hover - Отображать только  при наведении на блок с контентом{"\n\n"}
+				</Override>
+				<Override slot="Text TBody Row-7 Col-1">
+					Изменять положение Tolltip при нехватке места.{" \n\n"}
+				</Override>
+				<Override slot="Text TBody Row-1 Col-2">
+					4px{"\n\n"}
+				</Override>
+				<Override slot="Text TBody Row-2 Col-2">
+					true
+				</Override>
+				<Override slot="Text TBody Row-3 Col-2">
+					top{"\n\n"}
+				</Override>
+				<Override slot="Text TBody Row-4 Col-2">
+					--color-dark{"\n\n"}
+				</Override>
+				<Override slot="Text TBody Row-5 Col-2">
+					0{"\n\n"}
+				</Override>
+				<Override slot="Text TBody Row-6 Col-2">
 					:always{" \n\n"}
-				</Text>
-				{" "}
-			</Box>
-			<Box display="flex" border-width="1px" border-style="solid" border-color="#eaeaea">
-				<Text
-					width="100%"
-					font="18px sans-serif"
-					padding="15px 15px 15px 15px"
-					margin="0 0 0 0"
-					border-width="1px"
-					border-style="solid"
-					border-color="#eaeaea"
-				>
-					Автоматическая смена положения Tooltip
-				</Text>
-				<Text
-					width="100%"
-					font="18px sans-serif"
-					padding="15px 15px 15px 15px"
-					margin="0 0 0 0"
-					border-width="1px"
-					border-style="solid"
-					border-color="#eaeaea"
-				>
-					Изменять положение Tolltip при нехватке места.{" "}
-				</Text>
-				<Text width="100%" font="18px sans-serif" padding="15px 15px 15px 15px" margin="0 0 0 0">
-					on
-				</Text>
-				{" "}
-			</Box>
+				</Override>
+				<Override slot="Text TBody Row-7 Col-2">
+					true
+				</Override>
+			</Components.Table>
 			<Box margin="50px 0px 30px 0px">
 				<Text font="600 24px sans-serif">
 					Пример с разными положениями:
