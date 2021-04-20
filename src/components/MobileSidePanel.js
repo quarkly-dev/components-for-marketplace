@@ -345,7 +345,10 @@ const propInfo = {
 		weight: 1
 	},
 	menuPosition: {
-		title: 'Положение панели в мобильном виде',
+		title: {
+			en: 'Положение панели в мобильном виде 2',
+			ru: 'Положение панели в мобильном виде 1'
+		},
 		control: 'select',
 		variants: [{
 			title: {
