@@ -62,7 +62,7 @@ export default {
 				"604b6938652a1e001e075df7",
 				"604b6546652a1e001e075db3",
 				"607467be0ba79600228c1fec",
-				"6076fb62eb6a2d001f28106e"
+				"607ff75eb99fb9001fcbd405"
 			]
 		},
 		"60474504627982001eb71a54": {
@@ -338,18 +338,13 @@ export default {
 		},
 		"607467be0ba79600228c1fec": {
 			"id": "607467be0ba79600228c1fec",
-			"pageUrl": "form1",
+			"pageUrl": "yoomoneydonateform",
 			"name": "YoomoneyDonateForm"
 		},
 		"6075a2bdb99fb9001fcbc879": {
 			"id": "6075a2bdb99fb9001fcbc879",
 			"pageUrl": "slider",
 			"name": "Slider"
-		},
-		"6076fb62eb6a2d001f28106e": {
-			"id": "6076fb62eb6a2d001f28106e",
-			"pageUrl": "test",
-			"name": "Test"
 		},
 		"607e7f850ba79600228c269a": {
 			"id": "607e7f850ba79600228c269a",
@@ -365,6 +360,11 @@ export default {
 			"id": "607e82c36381680022817027",
 			"pageUrl": "lightboxvideo",
 			"name": "LightboxVideo"
+		},
+		"607ff75eb99fb9001fcbd405": {
+			"id": "607ff75eb99fb9001fcbd405",
+			"pageUrl": "pdfviewer",
+			"name": "pdfviewer"
 		}
 	},
 	"mode": "production",

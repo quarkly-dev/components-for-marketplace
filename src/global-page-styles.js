@@ -395,14 +395,14 @@ const pageStyles = {
         "justify-content": "",
         "align-items": ""
     },
-    "form1": {
+    "yoomoneydonateform": {
         "padding": "",
         "margin": "",
         "display": "",
         "justify-content": "",
         "align-items": ""
     },
-    "test": {
+    "pdfviewer": {
         "padding": "",
         "margin": "",
         "display": "",
