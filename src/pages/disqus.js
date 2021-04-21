@@ -24,7 +24,6 @@ export default (() => {
 			<Components.Disqus identifierProp="sasdasd" languageProp="en">
 				<Override slot="Disqus Content" languageProp="en" width="auto" />
 			</Components.Disqus>
-			<Components.Disqus margin="500px 100 500px 100px" />
 			<Box quarkly-title="Props" height="auto" min-height="20px">
 				<Text font="600 24px sans-serif" quarkly-title="Title" margin="76px 0px 16px 0px">
 					Пропсы:

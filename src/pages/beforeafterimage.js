@@ -25,7 +25,7 @@ export default (() => {
 			</Box>
 			<Components.BeforeAfterImage aspectRatio="16:9" activationType="onDrag">
 				<Override slot="Slider" border-width="2px" />
-				<Override slot="Image" />
+				<Override slot="Image" text-align="center" margin="0px auto 0px auto" />
 			</Components.BeforeAfterImage>
 			<Box margin="50px 0px 0px 0px" quarkly-title="Architecture" />
 			<Box quarkly-title="Props" height="auto" min-height="20px">
