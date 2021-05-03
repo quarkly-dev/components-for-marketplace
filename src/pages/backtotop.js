@@ -21,57 +21,59 @@ export default (() => {
 					Back to top
 				</Text>
 			</Box>
-			<Text font="600 24px sans-serif" quarkly-title="Title">
-				Пропсы:
-			</Text>
-			<Components.Table showHeader colsProp="3" width="100%">
-				<Override slot="Text THead Col-0">
-					Название{"\n\n"}
-				</Override>
-				<Override slot="Text THead Col-1">
-					Описание{"\n\n"}
-				</Override>
-				<Override slot="Text THead Col-2">
-					Значение по дефолту{"\n\n"}
-				</Override>
-				<Override slot="Text TBody Row-0 Col-0">
-					Animation duration{"\n\n"}
-				</Override>
-				<Override slot="Text TBody Row-0 Col-1">
-					Продолжительность анимации (миллисекунды){"\n\n"}
-				</Override>
-				<Override slot="Text TBody Row-0 Col-2">
-					1000{"\n\n"}
-				</Override>
-				<Override slot="Text TBody Row-1 Col-0">
-					Animation easing preset{"\n\n"}
-				</Override>
-				<Override slot="Text TBody Row-1 Col-1">
-					Скорость течения анимации{"\n\n"}
-				</Override>
-				<Override slot="Text TBody Row-1 Col-2">
-					easeInOutQuad{"\n\n"}
-				</Override>
-				<Override slot="Text TBody Row-2 Col-0">
-					Show button after (in pixel){"\n\n"}
-				</Override>
-				<Override slot="Text TBody Row-2 Col-1">
-					Показать кнопку, после скрола на{" \n\n"}
-				</Override>
-				<Override slot="Text TBody Row-2 Col-2">
-					100{"\n\n"}
-				</Override>
-				<Override slot="Text TBody Row-3 Col-0">
-					Show button always{"\n\n"}
-				</Override>
-				<Override slot="Text TBody Row-3 Col-1">
-					Показывать кнопку всегда{"\n\n"}
-				</Override>
-				<Override slot="Text TBody Row-3 Col-2">
-					false
-				</Override>
-			</Components.Table>
-			<Components.BackToTop showAlways={false} />
+			<Box display="none">
+				<Text font="600 24px sans-serif" quarkly-title="Title">
+					Props{" "}
+				</Text>
+				<Components.Table showHeader colsProp="3" width="100%">
+					<Override slot="Text THead Col-0">
+						Название
+					</Override>
+					<Override slot="Text THead Col-1">
+						Описание
+					</Override>
+					<Override slot="Text THead Col-2">
+						Значение по дефолту
+					</Override>
+					<Override slot="Text TBody Row-0 Col-0">
+						Animation duration
+					</Override>
+					<Override slot="Text TBody Row-0 Col-1">
+						Продолжительность анимации (миллисекунды)
+					</Override>
+					<Override slot="Text TBody Row-0 Col-2">
+						1000
+					</Override>
+					<Override slot="Text TBody Row-1 Col-0">
+						Animation easing preset
+					</Override>
+					<Override slot="Text TBody Row-1 Col-1">
+						Скорость течения анимации
+					</Override>
+					<Override slot="Text TBody Row-1 Col-2">
+						easeInOutQuad
+					</Override>
+					<Override slot="Text TBody Row-2 Col-0">
+						Show button after (in pixel)
+					</Override>
+					<Override slot="Text TBody Row-2 Col-1">
+						Показать кнопку, после скрола на{" "}
+					</Override>
+					<Override slot="Text TBody Row-2 Col-2">
+						100
+					</Override>
+					<Override slot="Text TBody Row-3 Col-0">
+						Show button always
+					</Override>
+					<Override slot="Text TBody Row-3 Col-1">
+						Показывать кнопку всегда
+					</Override>
+					<Override slot="Text TBody Row-3 Col-2">
+						false
+					</Override>
+				</Components.Table>
+			</Box>
+			<Components.QuarklycommunityKitBackToTop showAlways={false} />
 		</Box>
 		<Section padding="64px 0" sm-padding="40px 0" font="--base" color="--dark">
 			<Text

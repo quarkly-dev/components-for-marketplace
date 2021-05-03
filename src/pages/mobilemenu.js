@@ -15,39 +15,44 @@ export default (() => {
 			<meta name={"description"} content={"Web site created using quarkly.io"} />
 			<link rel={"shortcut icon"} href={"https://uploads.quarkly.io/readme/cra/favicon-32x32.ico"} type={"image/x-icon"} />
 		</Helmet>
-		<Box padding="0px 30px 0px 30px">
+		<Box padding="0px 30px 100px 30px">
 			<Box margin="50px 0px 100px 0px">
 				<Text text-align="center" font="--headline1">
 					Mobile menu
 				</Text>
 			</Box>
 			<Components.MobileMenu />
-			<Box margin="50px 0px 0px 0px">
+			<Box margin="50px 0px 0px 0px" display="none">
 				<Text font="600 24px sans-serif">
-					Пропсы:
+					Props{" "}
 				</Text>
+				<Components.Table
+					showHeader
+					colsProp="3"
+					rowsProp="1"
+					width="100%"
+					display="none"
+				>
+					<Override slot="Text TBody Row-0 Col-0">
+						Mobile version breakpoint{"\n\n"}
+					</Override>
+					<Override slot="Text TBody Row-0 Col-1">
+						Брейкпоинт, меньше которого меню сворачивается в бургер{"\n\n"}
+					</Override>
+					<Override slot="Text TBody Row-0 Col-2">
+						md{"\n\n"}
+					</Override>
+					<Override slot="Text THead Col-0">
+						Название{"\n\n"}
+					</Override>
+					<Override slot="Text THead Col-1">
+						Описание{"\n\n"}
+					</Override>
+					<Override slot="Text THead Col-2">
+						Значение по дефолту{"\n\n"}
+					</Override>
+				</Components.Table>
 			</Box>
-			<Components.Table showHeader colsProp="3" rowsProp="1" width="100%">
-				<Override slot="Text TBody Row-0 Col-0">
-					Mobile version breakpoint{"\n\n"}
-				</Override>
-				<Override slot="Text TBody Row-0 Col-1">
-					Брейкпоинт, меньше которого меню сворачивается в бургер{"\n\n"}
-				</Override>
-				<Override slot="Text TBody Row-0 Col-2">
-					md{"\n\n"}
-				</Override>
-				<Override slot="Text THead Col-0">
-					Название{"\n\n"}
-				</Override>
-				<Override slot="Text THead Col-1">
-					Описание{"\n\n"}
-				</Override>
-				<Override slot="Text THead Col-2">
-					Значение по дефолту{"\n\n"}
-				</Override>
-			</Components.Table>
-			<Box height="100px" />
 		</Box>
 		<Link
 			font={"--capture"}

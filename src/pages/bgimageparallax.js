@@ -16,13 +16,13 @@ export default (() => {
 			<meta name={"description"} content={"Web site created using quarkly.io"} />
 			<link rel={"shortcut icon"} href={"https://uploads.quarkly.io/readme/cra/favicon-32x32.ico"} type={"image/x-icon"} />
 		</Helmet>
-		<Box padding="0px 30px 50px 30px" quarkly-title="Wrapper">
+		<Box padding="0px 30px 100px 30px" quarkly-title="Wrapper">
 			<Box quarkly-title="Header" margin="50px 0px 100px 0px">
 				<Text text-align="center" font="--headline1">
 					BgImage Parallax
 				</Text>
 			</Box>
-			<Components.BgImageParallax
+			<Components.QuarklycommunityKitBgImageParallax
 				imageURL="https://romanbabad.ucoz.net/src/aba/1/default-picture-1440.png"
 				height="600px"
 				imageRepeat="repeat"
@@ -33,10 +33,10 @@ export default (() => {
 				margin="0px auto 0px auto"
 			>
 				<Override slot="Bground" height="1000px" />
-			</Components.BgImageParallax>
-			<Box margin="50px 0px 0px 0px" quarkly-title="Architecture">
+			</Components.QuarklycommunityKitBgImageParallax>
+			<Box margin="50px 0px 0px 0px" quarkly-title="Architecture" display="none">
 				<Text font="600 24px sans-serif" quarkly-title="Title">
-					Архитектура:
+					Structure{" "}
 				</Text>
 				<Box
 					margin="0px 0px 50px 0px"
@@ -92,73 +92,73 @@ export default (() => {
 					</Box>
 				</Box>
 			</Box>
-			<Box quarkly-title="Props" height="auto" min-height="20px">
+			<Box quarkly-title="Props" height="auto" min-height="20px" display="none">
 				<Text font="600 24px sans-serif" quarkly-title="Title">
-					Пропсы:
+					Props{" "}
 				</Text>
 				<Components.Table colsProp="3" showHeader rowsProp="6" width="100%">
 					<Override slot="Text THead Col-0">
-						Название{"\n\n"}
+						Название
 					</Override>
 					<Override slot="Text THead Col-1">
-						Описание{"\n\n"}
+						Описание
 					</Override>
 					<Override slot="Text THead Col-2">
-						Значение по дефолту{"\n\n"}
+						Значение по дефолту
 					</Override>
 					<Override slot="Text TBody Row-0 Col-0">
-						Ссылка на изображение{"\n\n"}
+						Ссылка на изображение
 					</Override>
 					<Override slot="Text TBody Row-0 Col-1">
-						Ссылка на изображение{"\n\n"}
+						Ссылка на изображение
 					</Override>
 					<Override slot="Text TBody Row-0 Col-2">
-						none{"\n\n"}
+						none
 					</Override>
 					<Override slot="Text TBody Row-1 Col-0">
-						Размер изображения{"\n\n"}
+						Размер изображения
 					</Override>
 					<Override slot="Text TBody Row-2 Col-0">
-						Выравнивание изображения{"\n\n"}
+						Выравнивание изображения
 					</Override>
 					<Override slot="Text TBody Row-3 Col-0">
-						Повтор изображения{"\n\n"}
+						Повтор изображения
 					</Override>
 					<Override slot="Text TBody Row-4 Col-0">
-						Скорость прокрутки{"\n\n"}
+						Скорость прокрутки
 					</Override>
 					<Override slot="Text TBody Row-5 Col-0">
-						Инерция прокрутки{"\n\n"}
+						Инерция прокрутки
 					</Override>
 					<Override slot="Text TBody Row-1 Col-1">
-						Размер изображения{"\n\n"}
+						Размер изображения
 					</Override>
 					<Override slot="Text TBody Row-2 Col-1">
-						Выравнивание изображения, если оно меньше блока{"\n\n"}
+						Выравнивание изображения, если оно меньше блока
 					</Override>
 					<Override slot="Text TBody Row-3 Col-1">
-						Повторять изображения по вертикали и горизонтали{"\n\n"}
+						Повторять изображения по вертикали и горизонтали
 					</Override>
 					<Override slot="Text TBody Row-4 Col-1">
-						Скорость прокрутки изображения{" \n\n"}
+						Скорость прокрутки изображения{" "}
 					</Override>
 					<Override slot="Text TBody Row-5 Col-1">
-						Прокрутка, после остановки{"\n\n"}
+						Прокрутка, после остановки
 					</Override>
 					<Override slot="Text TBody Row-1 Col-2">
-						cover{" \n\n"}
+						cover{" "}
 					</Override>
 					<Override slot="Text TBody Row-2 Col-2">
-						center{"\n\n"}
+						center
 					</Override>
 					<Override slot="Text TBody Row-3 Col-2">
-						no-repeat{"\n\n"}
+						no-repeat
 					</Override>
 					<Override slot="Text TBody Row-4 Col-2">
-						0.5{"\n\n"}
+						0.5
 					</Override>
 					<Override slot="Text TBody Row-5 Col-2">
-						1{"\n\n"}
+						1
 					</Override>
 				</Components.Table>
 			</Box>

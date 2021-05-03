@@ -21,10 +21,16 @@ export default (() => {
 					FB Comments
 				</Text>
 			</Box>
-			<Components.FbComments languageProp="rus_RU" />
-			<Box quarkly-title="Props" height="auto" min-height="20px">
+			<Components.FbComments
+				languageProp="rus_RU"
+				appID="767471200701076"
+				commentsNumberProp="10"
+				appId="767471200701076"
+				href="https://www.facebook.com/cna.net.au/"
+			/>
+			<Box quarkly-title="Props" height="auto" min-height="20px" display="none">
 				<Text font="600 24px sans-serif" quarkly-title="Title">
-					Пропсы:
+					Props{" "}
 				</Text>
 				<Components.Table colsProp="3" rowsProp="3" showHeader width="100%">
 					<Override slot="Text THead Col-0">

@@ -15,16 +15,16 @@ export default (() => {
 			<meta name={"description"} content={"Web site created using quarkly.io"} />
 			<link rel={"shortcut icon"} href={"https://uploads.quarkly.io/readme/cra/favicon-32x32.ico"} type={"image/x-icon"} />
 		</Helmet>
-		<Box padding="0px 30px 50px 30px" quarkly-title="Wrapper">
+		<Box padding="0px 30px 100px 30px" quarkly-title="Wrapper">
 			<Box margin="50px 0px 100px 0px" quarkly-title="Header">
 				<Text text-align="center" font="--headline1">
 					Progress Bar
 				</Text>
 			</Box>
 			<Components.ProgressBar />
-			<Box quarkly-title="Props" height="auto" min-height="20px">
+			<Box quarkly-title="Props" height="auto" min-height="20px" display="none">
 				<Text font="600 24px sans-serif" quarkly-title="Title">
-					Пропсы:
+					Props{" "}
 				</Text>
 				<Components.Table width="100%" showHeader colsProp="3" rowsProp="8">
 					<Override slot="Text THead Col-0">

@@ -22,9 +22,9 @@ export default (() => {
 				</Text>
 			</Box>
 			<Components.Pricelist design="horizontal" active="2" />
-			<Box quarkly-title="Props" height="auto" min-height="20px">
+			<Box quarkly-title="Props" height="auto" min-height="20px" display="none">
 				<Text font="600 24px sans-serif" quarkly-title="Title">
-					Пропсы:
+					Props{" "}
 				</Text>
 				<Components.Table width="100%" showHeader colsProp="3" rowsProp="5">
 					<Override slot="Text THead Col-0">
@@ -82,12 +82,12 @@ export default (() => {
 						4{"\n\n"}
 					</Override>
 				</Components.Table>
-			</Box>
-			<Box margin="50px 0px 30px 0px" quarkly-title="Example 1 ">
-				<Text font="600 24px sans-serif" quarkly-title="Title">
-					Пример с вертикальным положением:
-				</Text>
-				<Hr border-color="#c4c4c4" margin="16px 0px 40px 0px" />
+				<Box margin="50px 0px 30px 0px" quarkly-title="Example 1 ">
+					<Text font="600 24px sans-serif" quarkly-title="Title">
+						Пример с вертикальным положением:
+					</Text>
+					<Hr border-color="#c4c4c4" margin="16px 0px 40px 0px" />
+				</Box>
 			</Box>
 			<Components.Pricelist design="vertical" active="1" size="7" show="6" />
 		</Box>

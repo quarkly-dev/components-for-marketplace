@@ -25,9 +25,15 @@ export default (() => {
 				<Override slot="Lightbox image" src="https://romanbabad.ucoz.net/src/aba/1/default-picture-1440.png" />
 				<Image width="300px" src="https://romanbabad.ucoz.net/src/aba/1/default-picture-1440.png" margin="0px auto 0px auto" />
 			</Components.LIghtBoxImage>
-			<Box quarkly-title="Props" height="auto" min-height="20px" margin="500 0px 0px 0px">
+			<Box
+				quarkly-title="Props"
+				height="auto"
+				min-height="20px"
+				margin="500 0px 0px 0px"
+				display="none"
+			>
 				<Text font="600 24px sans-serif" quarkly-title="Title">
-					Пропсы:
+					Props{" "}
 				</Text>
 				<Components.Table width="100%" colsProp="3" rowsProp="3" showHeader>
 					<Override slot="Text THead Col-0">

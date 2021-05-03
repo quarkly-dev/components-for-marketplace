@@ -15,13 +15,13 @@ export default (() => {
 			<meta name={"description"} content={"Web site created using quarkly.io"} />
 			<link rel={"shortcut icon"} href={"https://uploads.quarkly.io/readme/cra/favicon-32x32.ico"} type={"image/x-icon"} />
 		</Helmet>
-		<Box padding="0px 30px 0px 30px">
+		<Box padding="0px 30px 100px 30px" quarkly-title="Wrapper">
 			<Box margin="50px 0px 100px 0px">
 				<Text text-align="center" font="--headline1">
 					Audio
 				</Text>
 			</Box>
-			<Components.Audio
+			<Components.QuarklycommunityKitAudio
 				controls
 				autoPlay={false}
 				muted={false}
@@ -30,48 +30,48 @@ export default (() => {
 				margin="500px au 500px auto"
 			>
 				<Override slot="Audio Tag" margin="500px 0px 500px 0px" />
-			</Components.Audio>
-			<Components.Audio src="  " />
-			<Box margin="50px 0px 0px 0px">
+				{" "}
+			</Components.QuarklycommunityKitAudio>
+			<Box margin="50px 0px 0px 0px" display="none">
 				<Text font="600 24px sans-serif">
-					Пропсы:
+					Props{" "}
 				</Text>
 				<Components.Table showHeader width="100%" colsProp="3" rowsProp="5">
 					<Override slot="Text THead Col-0">
-						Название{"\n\n"}
+						Название
 					</Override>
 					<Override slot="Text THead Col-1">
-						Описание{"\n\n"}
+						Описание
 					</Override>
 					<Override slot="Text THead Col-2">
-						Значение по дефолту{"\n\n"}
+						Значение по дефолту
 					</Override>
 					<Override slot="Text TBody Row-0 Col-0">
-						Src{"\n\n"}
+						Src
 					</Override>
 					<Override slot="Text TBody Row-1 Col-0">
-						Autoplay{"\n\n"}
+						Autoplay
 					</Override>
 					<Override slot="Text TBody Row-2 Col-0">
-						Show controls{"\n\n"}
+						Show controls
 					</Override>
 					<Override slot="Text TBody Row-3 Col-0">
-						Muted{"\n\n"}
+						Muted
 					</Override>
 					<Override slot="Text TBody Row-4 Col-0">
-						Loop{"\n\n"}
+						Loop
 					</Override>
 					<Override slot="Text TBody Row-0 Col-1">
-						Прямая ссылка на аудиофайл{"\n\n"}
+						Прямая ссылка на аудиофайл
 					</Override>
 					<Override slot="Text TBody Row-1 Col-1">
-						Автоматическое воспроизведение аудио, после загрузки страницы{"\n\n"}
+						Автоматическое воспроизведение аудио, после загрузки страницы
 					</Override>
 					<Override slot="Text TBody Row-2 Col-1">
-						Показать плеер{"\n\n"}
+						Показать плеер
 					</Override>
 					<Override slot="Text TBody Row-3 Col-1">
-						Отключить звук{" \n\n"}
+						Отключить звук{" "}
 					</Override>
 					<Override slot="Text TBody Row-4 Col-1">
 						Зацикливает воспроизведение аудио, чтобы оно повторялось с начала после завершения
@@ -83,16 +83,15 @@ export default (() => {
 						false
 					</Override>
 					<Override slot="Text TBody Row-2 Col-2">
-						false{"\n\n"}
+						false
 					</Override>
 					<Override slot="Text TBody Row-3 Col-2">
-						false{"\n\n"}
+						false
 					</Override>
 					<Override slot="Text TBody Row-4 Col-2">
-						false{"\n\n"}
+						false
 					</Override>
 				</Components.Table>
-				<Box height="100px" />
 			</Box>
 		</Box>
 		<Link

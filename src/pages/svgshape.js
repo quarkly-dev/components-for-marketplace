@@ -20,11 +20,9 @@ export default (() => {
 				<Text text-align="center" font="--headline1">
 					Svg Shape
 				</Text>
-				<Components.SvgShape />
 			</Box>
 			<Box display="flex" margin="500px 10 500px 100px">
 				<Components.SvgShape
-					width="300px"
 					height="200px"
 					margin="0px auto 0px auto"
 					strokeWidth="8"
@@ -33,20 +31,20 @@ export default (() => {
 					fill="#194968"
 					strokeLinecap="butt"
 					strokeDasharray="0"
+					width="300px"
 				/>
 				<Components.SvgShape
-					width="300px"
 					height="200px"
-					margin="0px auto 0px auto"
 					strokeWidth="8"
 					fill="#0094ff"
 					stroke="#393838"
 					strokeLinecap="round"
 					strokeDasharray="31"
 					type="Square"
+					width="300px"
+					margin="0px 4px 0px 0px"
 				/>
 				<Components.SvgShape
-					width="300px"
 					height="200px"
 					margin="0px auto 0px auto"
 					strokeWidth="8"
@@ -55,11 +53,12 @@ export default (() => {
 					stroke="#c4c8c8"
 					strokeLinecap="butt"
 					strokeDasharray="0"
+					width="300px"
 				/>
 			</Box>
 			<Box quarkly-title="Props" height="auto" min-height="20px">
 				<Text font="600 24px sans-serif" quarkly-title="Title">
-					Пропсы:
+					Props{" "}
 				</Text>
 				<Components.Table width="100%" showHeader colsProp="3" rowsProp="8">
 					<Override slot="Text THead Col-0">

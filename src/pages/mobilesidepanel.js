@@ -15,13 +15,13 @@ export default (() => {
 			<meta name={"description"} content={"Web site created using quarkly.io"} />
 			<link rel={"shortcut icon"} href={"https://uploads.quarkly.io/readme/cra/favicon-32x32.ico"} type={"image/x-icon"} />
 		</Helmet>
-		<Box padding="0px 30px 50px 30px" quarkly-title="Wrapper">
+		<Box padding="0px 30px 100px 30px" quarkly-title="Wrapper">
 			<Box margin="50px 0px 100px 0px" quarkly-title="Header">
 				<Text text-align="center" font="--headline1">
 					Mobile Side Panel
 				</Text>
 			</Box>
-			<Components.MobileSidePanel menuPosition="near" md-margin="500px 0px 50 0px">
+			<Components.QuarklycommunityKitMobileSidePanel>
 				<Text lg-font="18px/1.7 sans-serif" font="18px/1.7 sans-serif">
 					<Strong
 						overflow-wrap="normal"
@@ -37,13 +37,12 @@ export default (() => {
 					<br />
 					{"\n\n"}
 				</Text>
-			</Components.MobileSidePanel>
-			<Components.MobileSidePanel />
-			<Box quarkly-title="Props" height="auto" min-height="20px">
+			</Components.QuarklycommunityKitMobileSidePanel>
+			<Box quarkly-title="Props" height="auto" min-height="20px" display="none">
 				<Text font="600 24px sans-serif" quarkly-title="Title">
-					Пропсы:
+					Props{" "}
 				</Text>
-				<Components.Table lg-width="100%">
+				<Components.Table lg-width="100%" colsProp="3" showHeader width="100%">
 					<Override slot="Text THead Col-0">
 						Название{"\n\n"}
 					</Override>

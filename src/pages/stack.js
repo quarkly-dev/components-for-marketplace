@@ -17,14 +17,22 @@ export default (() => {
 			<link rel={"shortcut icon"} href={"https://uploads.quarkly.io/readme/cra/favicon-32x32.ico"} type={"image/x-icon"} />
 		</Helmet>
 		<Box padding="0px 30px 50px 30px" quarkly-title="Wrapper">
-			<Box margin="50px 0px 100px 0px" quarkly-title="Header">
+			<Box margin="50px 0px 100px 0px" quarkly-title="Header" height="150px">
 				<Text text-align="center" font="--headline1">
 					Stack{"\n\n"}
 				</Text>
 			</Box>
 			<Stack gap="--cmp-stack-gap-default">
 				{"    "}
-				<StackItem width="50%" display="flex">
+				<StackItem
+					width="calc(33% - 20px)"
+					display="flex"
+					border-width="1px"
+					border-style="solid"
+					border-color="rgba(0, 0, 0, 0.39)"
+					margin="0px 5px 0px 5px"
+					height="150px"
+				>
 					{"        "}
 					<Text font="--lead" margin="0px 0px 0px 0px" display="inline-block">
 						{"            "}First Item{"\n        "}
@@ -32,17 +40,40 @@ export default (() => {
 					{"    "}
 				</StackItem>
 				{"    "}
-				<StackItem width="50%" display="flex">
+				<StackItem
+					width="calc(33% - 20px)"
+					display="flex"
+					border-width="1px"
+					border-style="solid"
+					border-color="rgba(0, 0, 0, 0.39)"
+					margin="0px 5px 0px 5px"
+					height="150px"
+				>
 					{"        "}
 					<Text font="--lead" margin="0px 0px 0px 0px" display="inline-block">
 						{"            "}Second Item{"\n        "}
 					</Text>
 					{"    "}
 				</StackItem>
+				<StackItem
+					width="calc(33% - 20px)"
+					display="flex"
+					border-width="1px"
+					border-style="solid"
+					border-color="rgba(0, 0, 0, 0.39)"
+					margin="0px 5px 0px 5px"
+					height="150px"
+				>
+					{"        "}
+					<Text font="--lead" margin="0px 0px 0px 0px" display="inline-block">
+						Third Item{"\n        "}
+					</Text>
+					{"    "}
+				</StackItem>
 			</Stack>
 			<Box margin="50px 0px 0px 0px" quarkly-title="Architecture">
 				<Text font="600 24px sans-serif" quarkly-title="Title">
-					Архитектура:
+					Structure{" "}
 				</Text>
 				<Box
 					margin="0px 0px 50px 0px"
@@ -85,7 +116,7 @@ export default (() => {
 			</Box>
 			<Box quarkly-title="Props" height="auto" min-height="20px">
 				<Text font="600 24px sans-serif" quarkly-title="Title">
-					Пропсы:
+					Props{" "}
 				</Text>
 				<Components.Table width="100%" showHeader colsProp="3" rowsProp="1">
 					<Override slot="Text THead Col-0">

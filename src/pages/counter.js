@@ -16,7 +16,7 @@ export default (() => {
 			<link rel={"shortcut icon"} href={"https://uploads.quarkly.io/readme/cra/favicon-32x32.ico"} type={"image/x-icon"} />
 		</Helmet>
 		<Box
-			padding="15px 15px 15px 15px"
+			padding="15px 15px 100px 15px"
 			quarkly-title="Wrapper"
 			lg-padding="15px 15px 15px 15px"
 			lg-border-width=".5px"
@@ -63,9 +63,9 @@ export default (() => {
 					>
 						Clients worldwide
 					</Text>
-					<Components.Counter
+					<Components.QuarklycommunityKitCounter
 						endingNumber="135"
-						revers
+						revers={false}
 						lg-color="#767676"
 						lg-font="900 58px sans-serif"
 						border-color="#b5b5b5"
@@ -93,9 +93,9 @@ export default (() => {
 					>
 						Organic likes
 					</Text>
-					<Components.Counter
+					<Components.QuarklycommunityKitCounter
 						endingNumber="5000"
-						revers
+						revers={false}
 						lg-color="#767676"
 						lg-font="900 58px sans-serif"
 						border-color="#b5b5b5"
@@ -123,9 +123,9 @@ export default (() => {
 					>
 						Active employees
 					</Text>
-					<Components.Counter
+					<Components.QuarklycommunityKitCounter
 						endingNumber="1100"
-						revers
+						revers={false}
 						lg-color="#767676"
 						lg-font="900 58px sans-serif"
 						border-color="#b5b5b5"
@@ -134,61 +134,61 @@ export default (() => {
 					/>
 				</Box>
 			</Box>
-			<Box quarkly-title="Props" height="auto" min-height="20px">
+			<Box quarkly-title="Props" height="auto" min-height="20px" display="none">
 				<Text font="600 24px sans-serif" quarkly-title="Title">
-					Пропсы:
+					Props{" "}
 				</Text>
 				<Components.Table width="100%" showHeader colsProp="3" rowsProp="6">
 					<Override slot="Text THead Col-0">
-						Название{"\n\n"}
+						Название
 					</Override>
 					<Override slot="Text THead Col-1">
-						Описание{"\n\n"}
+						Описание
 					</Override>
 					<Override slot="Text THead Col-2">
-						Значение по дефолту{"\n\n"}
+						Значение по дефолту
 					</Override>
 					<Override slot="Text TBody Row-0 Col-0">
-						Starting Number{"\n\n"}
+						Starting Number
 					</Override>
 					<Override slot="Text TBody Row-1 Col-0">
-						Ending Number{"\n\n"}
+						Ending Number
 					</Override>
 					<Override slot="Text TBody Row-2 Col-0">
-						Revers{"\n\n"}
+						Revers
 					</Override>
 					<Override slot="Text TBody Row-3 Col-0">
-						Duration Animation{"\n\n"}
+						Duration Animation
 					</Override>
 					<Override slot="Text TBody Row-4 Col-0">
-						Number Suffix{"\n\n"}
+						Number Suffix
 					</Override>
 					<Override slot="Text TBody Row-5 Col-0">
-						Number Prefix{"\n\n"}
+						Number Prefix
 					</Override>
 					<Override slot="Text TBody Row-0 Col-1">
-						Начальное значение{"\n\n"}
+						Начальное значение
 					</Override>
 					<Override slot="Text TBody Row-1 Col-1">
-						Конечное значение{"\n\n"}
+						Конечное значение
 					</Override>
 					<Override slot="Text TBody Row-2 Col-1">
-						Возрастание / Убывание{"\n\n"}
+						Возрастание / Убывание
 					</Override>
 					<Override slot="Text TBody Row-3 Col-1">
-						Продолжительность анимации{"\n\n"}
+						Продолжительность анимации
 					</Override>
 					<Override slot="Text TBody Row-4 Col-1">
-						Символ после числа{"\n\n"}
+						Символ после числа
 					</Override>
 					<Override slot="Text TBody Row-5 Col-1">
-						Символ перед числом{"\n\n"}
+						Символ перед числом
 					</Override>
 					<Override slot="Text TBody Row-0 Col-2">
-						0{"\n\n"}
+						0
 					</Override>
 					<Override slot="Text TBody Row-1 Col-2">
-						100{"\n\n"}
+						100
 					</Override>
 					<Override slot="Text TBody Row-2 Col-2">
 						false
@@ -200,7 +200,7 @@ export default (() => {
 						none
 					</Override>
 					<Override slot="Text TBody Row-5 Col-2">
-						none{"\n\n"}
+						none
 					</Override>
 				</Components.Table>
 			</Box>
