@@ -17,12 +17,12 @@ export default (() => {
 		</Helmet>
 		<Box padding="0px 30px 50px 30px" quarkly-title="Wrapper">
 			<Box margin="50px 0px 100px 0px" quarkly-title="Header">
-				<Text text-align="center" font="--headline1">
+				<Text text-align="center" font="--headline1" margin="16px 0px 50px 0px">
 					VK Page
 				</Text>
-				<Components.VkPage groupId="175635117" />
+				<Components.QuarklycommunityKitVkPage groupId="175635117" />
 			</Box>
-			<Box quarkly-title="Props" height="auto" min-height="20px">
+			<Box quarkly-title="Props" height="auto" min-height="20px" display="none">
 				<Text font="600 24px sans-serif" quarkly-title="Title">
 					Props{"  "}
 				</Text>

@@ -15,9 +15,9 @@ export default (() => {
 			<meta name={"description"} content={"Web site created using quarkly.io"} />
 			<link rel={"shortcut icon"} href={"https://uploads.quarkly.io/readme/cra/favicon-32x32.ico"} type={"image/x-icon"} />
 		</Helmet>
-		<Box padding="0px 30px 50px 30px" quarkly-title="Wrapper">
+		<Box padding="0px 30px 100px 30px" quarkly-title="Wrapper">
 			<Box margin="50px 0px 100px 0px" quarkly-title="Header">
-				<Text text-align="center" font="--headline1">
+				<Text text-align="center" font="--headline1" margin="16px 0px 56px 0px">
 					Section
 				</Text>
 				<Section
@@ -83,7 +83,7 @@ export default (() => {
 					</Stack>
 				</Section>
 			</Box>
-			<Box quarkly-title="Props" height="auto" min-height="20px">
+			<Box quarkly-title="Props" height="auto" min-height="20px" display="none">
 				<Text font="600 24px sans-serif" quarkly-title="Title">
 					Props{" "}
 				</Text>

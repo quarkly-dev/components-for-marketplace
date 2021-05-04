@@ -394,6 +394,13 @@ const pageStyles = {
         "display": "",
         "justify-content": "",
         "align-items": ""
+    },
+    "paypal-donate-form": {
+        "padding": "",
+        "margin": "",
+        "display": "",
+        "justify-content": "",
+        "align-items": ""
     }
 };
 

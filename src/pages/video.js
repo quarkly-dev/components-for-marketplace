@@ -15,18 +15,14 @@ export default (() => {
 			<meta name={"description"} content={"Web site created using quarkly.io"} />
 			<link rel={"shortcut icon"} href={"https://uploads.quarkly.io/readme/cra/favicon-32x32.ico"} type={"image/x-icon"} />
 		</Helmet>
-		<Box padding="0px 30px 50px 30px" quarkly-title="Wrapper">
+		<Box padding="0px 30px 100px 30px" quarkly-title="Wrapper">
 			<Box margin="50px 0px 100px 0px">
 				<Text text-align="center" font="--headline1">
 					Video
 				</Text>
 			</Box>
-			<Components.Video poster=" ">
-				<Override slot="Video Tag" />
-			</Components.Video>
-			<Components.Source sm-margin="500px 0px 0px 0px" />
-			<Components.Track />
-			<Box>
+			<Components.QuarklycommunityKitVideo src="https://uploads.quarkly.io/molecules/default-video.mp4" />
+			<Box display="none">
 				<Box margin="50px 0px 0px 0px">
 					<Text font="600 24px sans-serif">
 						Props video
@@ -107,7 +103,7 @@ export default (() => {
 					</Override>
 				</Components.Table>
 			</Box>
-			<Box>
+			<Box display="none">
 				<Box margin="50px 0px 0px 0px">
 					<Text font="600 24px sans-serif">
 						Props source
@@ -197,25 +193,26 @@ export default (() => {
 					</Override>
 				</Components.Table>
 			</Box>
-			<Box margin="50px 0px 30px 0px">
+			<Box margin="50px 0px 30px 0px" display="none">
 				<Text font="600 24px sans-serif">
 					Пример с постером:
 				</Text>
 				<Hr border-color="#c4c4c4" margin="16px 0px 40px 0px" />
 				<Components.Video poster="https://images.pexels.com/photos/571169/pexels-photo-571169.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
 			</Box>
-			<Box margin="50px 0px 30px 0px">
+			<Box margin="50px 0px 30px 0px" display="none">
 				<Text font="600 24px sans-serif">
 					Пример с вложенным компонентом Track
 				</Text>
 				<Hr border-color="#c4c4c4" margin="16px 0px 40px 0px" />
 			</Box>
-			<Box margin="50px 0px 30px 0px">
+			<Box margin="50px 0px 30px 0px" display="none">
 				<Text font="600 24px sans-serif">
 					Пример с вложенным компонентом Source
 				</Text>
 				<Hr border-color="#c4c4c4" margin="16px 0px 40px 0px" />
 				<Components.Video poster=" ">
+					<Override slot="Video Tag" display="none" />
 					<Components.Source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/friday.mp4" />
 				</Components.Video>
 			</Box>

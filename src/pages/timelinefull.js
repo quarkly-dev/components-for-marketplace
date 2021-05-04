@@ -37,13 +37,13 @@ export default (() => {
 				</Override>
 			</Components.TimelineFull>
 			<Box height="100px" />
-			<Box margin="50px 0px 100px 0px" quarkly-title="Header">
+			<Box margin="50px 0px 100px 0px" quarkly-title="Header" display="none">
 				<Text text-align="center" font="--headline1">
 					TimeLineList + 
 TimeLineItem
 				</Text>
 			</Box>
-			<Components.TimelineList margin="500px 0px 500 0px">
+			<Components.TimelineList margin="500px 0px 500 0px" display="none">
 				<Components.TimelineItem>
 					<Override slot="Timeline Dates">
 						18:00 - 20:30
@@ -68,7 +68,7 @@ TimeLineItem
 					</Override>
 				</Components.TimelineItem>
 			</Components.TimelineList>
-			<Box margin="50px 0px 0px 0px" quarkly-title="Architecture">
+			<Box margin="50px 0px 0px 0px" quarkly-title="Architecture" display="none">
 				<Text font="600 24px sans-serif" quarkly-title="Title">
 					Structure{" "}
 				</Text>
@@ -111,7 +111,7 @@ TimeLineItem
 					</Box>
 				</Box>
 			</Box>
-			<Box quarkly-title="Props" height="auto" min-height="20px">
+			<Box quarkly-title="Props" height="auto" min-height="20px" display="none">
 				<Text font="600 24px sans-serif" quarkly-title="Title">
 					Props 
 TimeLine Full

@@ -21,7 +21,7 @@ export default (() => {
 					Popup
 				</Text>
 			</Box>
-			<Components.QuarklycommunityKitPopup>
+			<Components.QuarklycommunityKitPopup text-align="center">
 				<Override slot="Wrapper" width="70%" height="600px" />
 				<Box display="flex" padding="50px 50px 50px 50px">
 					<Image width="600px" src="https://images.unsplash.com/photo-1587554801471-37976a256db0?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&h=2000" height="469px" />

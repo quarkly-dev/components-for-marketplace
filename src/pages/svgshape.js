@@ -15,14 +15,14 @@ export default (() => {
 			<meta name={"description"} content={"Web site created using quarkly.io"} />
 			<link rel={"shortcut icon"} href={"https://uploads.quarkly.io/readme/cra/favicon-32x32.ico"} type={"image/x-icon"} />
 		</Helmet>
-		<Box padding="0px 30px 50px 30px" quarkly-title="Wrapper">
+		<Box padding="0px 30px 100px 30px" quarkly-title="Wrapper">
 			<Box margin="50px 0px 100px 0px" quarkly-title="Header">
 				<Text text-align="center" font="--headline1">
 					Svg Shape
 				</Text>
 			</Box>
 			<Box display="flex" margin="500px 10 500px 100px">
-				<Components.SvgShape
+				<Components.QuarklycommunityKitSvgShape
 					height="200px"
 					margin="0px auto 0px auto"
 					strokeWidth="8"
@@ -33,7 +33,7 @@ export default (() => {
 					strokeDasharray="0"
 					width="300px"
 				/>
-				<Components.SvgShape
+				<Components.QuarklycommunityKitSvgShape
 					height="200px"
 					strokeWidth="8"
 					fill="#0094ff"
@@ -44,7 +44,7 @@ export default (() => {
 					width="300px"
 					margin="0px 4px 0px 0px"
 				/>
-				<Components.SvgShape
+				<Components.QuarklycommunityKitSvgShape
 					height="200px"
 					margin="0px auto 0px auto"
 					strokeWidth="8"
@@ -56,85 +56,85 @@ export default (() => {
 					width="300px"
 				/>
 			</Box>
-			<Box quarkly-title="Props" height="auto" min-height="20px">
+			<Box quarkly-title="Props" height="auto" min-height="20px" display="none">
 				<Text font="600 24px sans-serif" quarkly-title="Title">
 					Props{" "}
 				</Text>
 				<Components.Table width="100%" showHeader colsProp="3" rowsProp="8">
 					<Override slot="Text THead Col-0">
-						Название{"\n\n"}
+						Название
 					</Override>
 					<Override slot="Text THead Col-1">
-						Описание{"\n\n"}
+						Описание
 					</Override>
 					<Override slot="Text THead Col-2">
-						Значение по дефолту{"\n\n"}
+						Значение по дефолту
 					</Override>
 					<Override slot="Text TBody Row-0 Col-0">
-						Type{"\n\n"}
+						Type
 					</Override>
 					<Override slot="Text TBody Row-1 Col-0">
-						Stroke{"\n\n"}
+						Stroke
 					</Override>
 					<Override slot="Text TBody Row-2 Col-0">
-						Srtoke width{"\n\n"}
+						Srtoke width
 					</Override>
 					<Override slot="Text TBody Row-3 Col-0">
-						Stroke opacity{"\n\n"}
+						Stroke opacity
 					</Override>
 					<Override slot="Text TBody Row-4 Col-0">
-						Stroke linecap{"\n\n"}
+						Stroke linecap
 					</Override>
 					<Override slot="Text TBody Row-5 Col-0">
-						Stroke dasharray{"\n\n"}
+						Stroke dasharray
 					</Override>
 					<Override slot="Text TBody Row-6 Col-0">
-						Fill{"\n\n"}
+						Fill
 					</Override>
 					<Override slot="Text TBody Row-7 Col-0">
-						Fill opacity{"\n\n"}
+						Fill opacity
 					</Override>
 					<Override slot="Text TBody Row-0 Col-1">
-						Тип формы{"\n\n"}
+						Тип формы
 					</Override>
 					<Override slot="Text TBody Row-1 Col-1">
-						Цвет рамки{"\n\n"}
+						Цвет рамки
 					</Override>
 					<Override slot="Text TBody Row-2 Col-1">
-						Толщина рамки (px){"\n\n"}
+						Толщина рамки (px)
 					</Override>
 					<Override slot="Text TBody Row-3 Col-1">
-						Прозрачность рамки{"\n\n"}
+						Прозрачность рамки
 					</Override>
 					<Override slot="Text TBody Row-4 Col-1">
-						Форма рамки  [round, square]{"\n\n"}
+						Форма рамки  [round, square]
 					</Override>
 					<Override slot="Text TBody Row-5 Col-1">
-						Заполненность рамки{"\n\n"}
+						Заполненность рамки
 					</Override>
 					<Override slot="Text TBody Row-6 Col-1">
-						Цвет фигуры{"\n\n"}
+						Цвет фигуры
 					</Override>
 					<Override slot="Text TBody Row-7 Col-1">
-						Прозрачность фигуры{"\n\n"}
+						Прозрачность фигуры
 					</Override>
 					<Override slot="Text TBody Row-0 Col-2">
-						rectangle{"\n\n"}
+						rectangle
 					</Override>
 					<Override slot="Text TBody Row-2 Col-2">
-						1{"\n\n"}
+						1
 					</Override>
 					<Override slot="Text TBody Row-3 Col-2">
-						1{"\n\n"}
+						1
 					</Override>
 					<Override slot="Text TBody Row-4 Col-2">
 						butt
 					</Override>
 					<Override slot="Text TBody Row-5 Col-2">
-						none{"\n\n"}
+						none
 					</Override>
 					<Override slot="Text TBody Row-7 Col-2">
-						1{"\n\n"}
+						1
 					</Override>
 					<Override slot="Text TBody Row-6 Col-2">
 						-

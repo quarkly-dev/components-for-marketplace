@@ -15,13 +15,13 @@ export default (() => {
 			<meta name={"description"} content={"Web site created using quarkly.io"} />
 			<link rel={"shortcut icon"} href={"https://uploads.quarkly.io/readme/cra/favicon-32x32.ico"} type={"image/x-icon"} />
 		</Helmet>
-		<Box padding="0px 30px 50px 30px" quarkly-title="Wrapper">
+		<Box padding="0px 30px 100px 30px" quarkly-title="Wrapper">
 			<Box margin="50px 0px 100px 0px" quarkly-title="Header">
 				<Text text-align="center" font="--headline1">
 					YoomoneyDonateForm
 				</Text>
 			</Box>
-			<Components.YoomoneyDonateForm
+			<Components.QuarklycommunityKitYoomoneyDonateForm
 				account="41001000000000"
 				phone={false}
 				fio={false}
@@ -31,134 +31,134 @@ export default (() => {
 				comment
 				width="auto"
 			/>
-			<Box quarkly-title="Props" height="auto" min-height="20px">
+			<Box quarkly-title="Props" height="auto" min-height="20px" display="none">
 				<Text font="600 24px sans-serif" quarkly-title="Title">
 					Props YoomoneyDonateForm
 				</Text>
 				<Box quarkly-title="Space">
 					<Components.Table showHeader width="100%" colsProp="3" rowsProp="14">
 						<Override slot="Text THead Col-0">
-							Название{"\n\n"}
+							Название
 						</Override>
 						<Override slot="Text TBody Row-0 Col-0">
-							Account{"\n\n"}
+							Account
 						</Override>
 						<Override slot="Text TBody Row-1 Col-0">
-							Targets{"\n\n"}
+							Targets
 						</Override>
 						<Override slot="Text TBody Row-1 Col-1">
-							Назначение перевода{"\n\n"}
+							Назначение перевода
 						</Override>
 						<Override slot="Text TBody Row-2 Col-0">
-							Text{"\n\n"}
+							Text
 						</Override>
 						<Override slot="Text TBody Row-3 Col-0">
-							Fixed Target{"\n\n"}
+							Fixed Target
 						</Override>
 						<Override slot="Text TBody Row-4 Col-0">
-							Sum{"\n\n"}
+							Sum
 						</Override>
 						<Override slot="Text TBody Row-5 Col-0">
-							Full name{"\n\n"}
+							Full name
 						</Override>
 						<Override slot="Text TBody Row-6 Col-0">
-							Email{"\n\n"}
+							Email
 						</Override>
 						<Override slot="Text TBody Row-7 Col-0">
-							Phone{"\n\n"}
+							Phone
 						</Override>
 						<Override slot="Text TBody Row-8 Col-0">
-							Address{"\n\n"}
+							Address
 						</Override>
 						<Override slot="Text TBody Row-9 Col-0">
-							Comment{"\n\n"}
+							Comment
 						</Override>
 						<Override slot="Text TBody Row-10 Col-0">
-							Comment hint{"\n\n"}
+							Comment hint
 						</Override>
 						<Override slot="Text TBody Row-11 Col-0">
-							Success URL{"\n\n"}
+							Success URL
 						</Override>
 						<Override slot="Text TBody Row-12 Col-0">
-							Use bank card{"\n\n"}
+							Use bank card
 						</Override>
 						<Override slot="Text THead Col-1">
-							Описание{"\n\n"}
+							Описание
 						</Override>
 						<Override slot="Text THead Col-2">
-							Значение по дефолту{"\n\n"}
+							Значение по дефолту
 						</Override>
 						<Override slot="Text TBody Row-13 Col-0">
-							Use mobile payment{"\n\n"}
+							Use mobile payment
 						</Override>
 						<Override slot="Text TBody Row-0 Col-1">
-							Идентификатор кошелька Yoomoney (обязательное поле){"\n\n"}
+							Идентификатор кошелька Yoomoney (обязательное поле)
 						</Override>
 						<Override slot="Text TBody Row-2 Col-1">
-							Текст кнопки{"\n\n"}
+							Текст кнопки
 						</Override>
 						<Override slot="Text TBody Row-3 Col-1">
-							Фиксированная цель перевода{"\n\n"}
+							Фиксированная цель перевода
 						</Override>
 						<Override slot="Text TBody Row-4 Col-1">
-							Сумма перевода{"\n\n"}
+							Сумма перевода
 						</Override>
 						<Override slot="Text TBody Row-5 Col-1">
-							Запрашивать имя в момент перевода{"\n\n"}
+							Запрашивать имя в момент перевода
 						</Override>
 						<Override slot="Text TBody Row-6 Col-1">
-							Запрашивать email в момент перевода{"\n\n"}
+							Запрашивать email в момент перевода
 						</Override>
 						<Override slot="Text TBody Row-7 Col-1">
-							Запрашивать телефон в момент перевода{"\n\n"}
+							Запрашивать телефон в момент перевода
 						</Override>
 						<Override slot="Text TBody Row-8 Col-1">
-							Запрашивать адрес в момент перевода{"\n\n"}
+							Запрашивать адрес в момент перевода
 						</Override>
 						<Override slot="Text TBody Row-9 Col-1">
-							Запрашивать комментарий в момент перевода{"\n\n"}
+							Запрашивать комментарий в момент перевода
 						</Override>
 						<Override slot="Text TBody Row-10 Col-1">
-							Подсказка для комментария{" \n\n"}
+							Подсказка для комментария{" "}
 						</Override>
 						<Override slot="Text TBody Row-11 Col-1">
-							Ссылка для редиректа{"\n\n"}
+							Ссылка для редиректа
 						</Override>
 						<Override slot="Text TBody Row-12 Col-1">
-							Возможность перевода череpез баноквскую карту{"\n\n"}
+							Возможность перевода череpез баноквскую карту
 						</Override>
 						<Override slot="Text TBody Row-13 Col-1">
-							Возможность перевода чере cчет телефона Билайн, МТС, Tele2{"\n\n"}
+							Возможность перевода чере cчет телефона Билайн, МТС, Tele2
 						</Override>
 						<Override slot="Text TBody Row-0 Col-2">
 							-
 						</Override>
 						<Override slot="Text TBody Row-1 Col-2">
-							Помочь проекту{"\n\n"}
+							Помочь проекту
 						</Override>
 						<Override slot="Text TBody Row-2 Col-2">
-							Перевести{"\n\n"}
+							Перевести
 						</Override>
 						<Override slot="Text TBody Row-3 Col-2">
-							true{"\n\n"}
+							true
 						</Override>
 						<Override slot="Text TBody Row-4 Col-2">
 							0
 						</Override>
 						<Override slot="Text TBody Row-5 Col-2">
-							false{"\n\n"}
+							false
 						</Override>
 						<Override slot="Text TBody Row-6 Col-2">
-							false{"\n\n"}
+							false
 						</Override>
 						<Override slot="Text TBody Row-7 Col-2">
-							false{"\n\n"}
+							false
 						</Override>
 						<Override slot="Text TBody Row-8 Col-2">
-							false{"\n\n"}
+							false
 						</Override>
 						<Override slot="Text TBody Row-9 Col-2">
-							false{"\n\n"}
+							false
 						</Override>
 						<Override slot="Text TBody Row-10 Col-2">
 							-

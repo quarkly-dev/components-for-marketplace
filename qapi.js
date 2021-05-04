@@ -60,7 +60,8 @@ export default {
 				"604b4f86652a1e001e075d2d",
 				"604b6938652a1e001e075df7",
 				"604b6546652a1e001e075db3",
-				"607467be0ba79600228c1fec"
+				"607467be0ba79600228c1fec",
+				"609102557c7803001e32ef02"
 			]
 		},
 		"60474504627982001eb71a54": {
@@ -332,7 +333,7 @@ export default {
 		"607467be0ba79600228c1fec": {
 			"id": "607467be0ba79600228c1fec",
 			"pageUrl": "yoomoneydonateform",
-			"name": "YoomoneyDonateForm"
+			"name": "Yoomoney Donate Form"
 		},
 		"6075a2bdb99fb9001fcbc879": {
 			"id": "6075a2bdb99fb9001fcbc879",
@@ -353,6 +354,11 @@ export default {
 			"id": "607e82c36381680022817027",
 			"pageUrl": "lightboxvideo",
 			"name": "LightboxVideo"
+		},
+		"609102557c7803001e32ef02": {
+			"id": "609102557c7803001e32ef02",
+			"pageUrl": "paypal-donate-form",
+			"name": "PayPal Donate Form"
 		}
 	},
 	"mode": "production",
