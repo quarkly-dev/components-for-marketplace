@@ -6,8 +6,8 @@ const overrides = {
 	'Picture Tag': {
 		kind: 'Picture Tag',
 		props: {
-			'width': '100%',
-			'height': 'auto'
+			width: '100%',
+			height: 'auto'
 		}
 	}
 };
@@ -29,14 +29,21 @@ const PictureComponent = ({
 		setEmpty(contentRef.current?.innerHTML === '<!--child placeholder-->');
 	}, [children]);
 	return <Wrapper {...rest}>
+		            
 		<Picture {...override('Picture Tag')} display={isEmpty && 'none'}>
+			                
 			<Content ref={contentRef}>
+				                    
 				{React.Children.map(children, child => React.isValidElement(child) && React.cloneElement(child, {
 					container: 'picture'
 				}))}
+				                
 			</Content>
+			            
 		</Picture>
-		{isEmpty && <ComponentNotice message={'Перетащите сюда компоненты "Image" и "Source" (опционально)'} />}
+		            
+		{isEmpty && <ComponentNotice message={'Drag the Image and Source components here (optional)'} />}
+		        
 	</Wrapper>;
 };
 

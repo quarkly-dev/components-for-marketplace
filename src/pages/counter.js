@@ -63,7 +63,7 @@ export default (() => {
 					>
 						Clients worldwide
 					</Text>
-					<Components.QuarklycommunityKitCounter
+					<Components.Counter
 						endingNumber="135"
 						revers={false}
 						lg-color="#767676"
@@ -93,7 +93,7 @@ export default (() => {
 					>
 						Organic likes
 					</Text>
-					<Components.QuarklycommunityKitCounter
+					<Components.Counter
 						endingNumber="5000"
 						revers={false}
 						lg-color="#767676"
@@ -123,7 +123,7 @@ export default (() => {
 					>
 						Active employees
 					</Text>
-					<Components.QuarklycommunityKitCounter
+					<Components.Counter
 						endingNumber="1100"
 						revers={false}
 						lg-color="#767676"
