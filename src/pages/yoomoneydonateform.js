@@ -21,16 +21,6 @@ export default (() => {
 					YoomoneyDonateForm
 				</Text>
 			</Box>
-			<Components.QuarklycommunityKitYoomoneyDonateForm
-				account="41001000000000"
-				phone={false}
-				fio={false}
-				payment
-				mobilePayment
-				address={false}
-				comment
-				width="auto"
-			/>
 			<Box quarkly-title="Props" height="auto" min-height="20px" display="none">
 				<Text font="600 24px sans-serif" quarkly-title="Title">
 					Props YoomoneyDonateForm
